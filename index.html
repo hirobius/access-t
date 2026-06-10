@@ -34,6 +34,10 @@
 <link rel="preconnect" href="https://live.staticflickr.com" crossorigin>
 <link rel="dns-prefetch" href="https://loremflickr.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Option 2 type pairing: Clash Display + Satoshi (Fontshare) -->
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
 <style>
   :root{
     /* ---- palette ---- */
@@ -161,7 +165,7 @@
   /* ===================== HERO ===================== */
   .hero{min-height:92vh;display:flex;align-items:flex-end;color:#fff;position:relative;background:var(--pine-900);overflow:hidden}
   .hero-bg{position:absolute;inset:0;z-index:0}
-  .hero-bg .ph{position:absolute;inset:0;height:100%;border:none;background:url("https://loremflickr.com/1600/900/pine,forest?lock=65") center/cover no-repeat,#1c2a22;z-index:0}
+  .hero-bg .ph{position:absolute;inset:0;height:100%;border:none;background:url("https://loremflickr.com/1600/900/wildfire?lock=70") center/cover no-repeat,#1c2a22;z-index:0}
   /* looping background video sits above the placeholder; if it fails to load the .ph shows through */
   .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
   /* keep the gradient backdrop but drop the placeholder label/icon sitting behind the hero copy */
@@ -238,7 +242,7 @@
   .ba-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm)}
   .ba-pair{display:grid;grid-template-columns:1fr 1fr;gap:3px;background:#fff}
   .ba-pair .ph{aspect-ratio:1/1;justify-content:flex-end}
-  .ba-pair .ph.before{background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(13,28,20,.6)),url("https://loremflickr.com/800/800/pine,forest?lock=65") center/cover no-repeat,#1c3322}
+  .ba-pair .ph.before{background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(13,28,20,.6)),url("https://loremflickr.com/800/800/pine,forest?lock=64") center/cover no-repeat,#1c3322}
   .ba-pair .ph.after{background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(13,28,20,.55)),url("https://loremflickr.com/800/800/pine,forest?lock=65") center/cover no-repeat,#1c3322}
   .ba-flag{position:absolute;top:12px;left:12px;z-index:2;font-family:var(--font-sans);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;padding:.28rem .6rem;border-radius:2px;font-weight:700}
   .ba-flag.b{background:rgba(0,0,0,.55);color:#fff}
@@ -317,16 +321,19 @@
   /* ---------- reveal ---------- */
   .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
   .reveal.in{opacity:1;transform:none}
-  .hero-inner > *{opacity:0;transform:translateY(20px);animation:rise .85s ease forwards}
-  .hero-inner > *:nth-child(1){animation-delay:.05s}
-  .hero-inner > *:nth-child(2){animation-delay:.2s}
-  .hero-inner > *:nth-child(3){animation-delay:.35s}
-  .hero-inner > *:nth-child(4){animation-delay:.5s}
+  .hero-inner > *,.v2-hero-inner > *{opacity:0;transform:translateY(20px);animation:rise .85s ease forwards}
+  .hero-inner > *:nth-child(1),.v2-hero-inner > *:nth-child(1){animation-delay:.05s}
+  .hero-inner > *:nth-child(2),.v2-hero-inner > *:nth-child(2){animation-delay:.2s}
+  .hero-inner > *:nth-child(3),.v2-hero-inner > *:nth-child(3){animation-delay:.35s}
+  .hero-inner > *:nth-child(4),.v2-hero-inner > *:nth-child(4){animation-delay:.5s}
+  .v2-hero-inner > *:nth-child(5){animation-delay:.62s}
   @keyframes rise{to{opacity:1;transform:none}}
 
   /* ===================================================================
      OPTION TWO — concise green one-pager
      =================================================================== */
+  /* Option 2 type pairing: Clash Display (display) + Satoshi (body), scoped to #layout-two */
+  #layout-two{--font-display:'Clash Display',system-ui,sans-serif;--font-sans:'Satoshi',system-ui,-apple-system,sans-serif;font-family:var(--font-sans)}
   .v2-eyebrow{font-family:var(--font-sans);text-transform:uppercase;letter-spacing:.22em;font-weight:700;font-size:.74rem;color:var(--leaf);display:inline-block}
   .v2-eyebrow.light{color:var(--leaf-soft)}
   /* (headings default to --ink via the global ramp; dark-bg sections opt into #fff below) */
@@ -349,7 +356,7 @@
   /* hero */
   .v2-hero{position:relative;color:#fff;background:var(--leaf-deep);overflow:hidden;min-height:84vh;display:flex;align-items:flex-end}
   .v2-hero-bg{position:absolute;inset:0;z-index:0}
-  .v2-hero-bg .ph{position:absolute;inset:0;height:100%;border:none;background:url("https://loremflickr.com/1600/900/pine,forest?lock=65") center/cover no-repeat,#18331f;z-index:0}
+  .v2-hero-bg .ph{position:absolute;inset:0;height:100%;border:none;background:url("https://loremflickr.com/1600/900/wildfire?lock=72") center/cover no-repeat,#18331f;z-index:0}
   .v2-hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
   .v2-hero-bg::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(19,50,31,.4),rgba(19,50,31,.3) 40%,rgba(19,50,31,.85) 82%,rgba(19,50,31,.96)),linear-gradient(90deg,rgba(19,50,31,.82),rgba(19,50,31,.22) 72%)}
   .v2-hero .wrap{position:relative;z-index:3;padding-block:clamp(4rem,8vw,6.5rem) clamp(2.5rem,5vw,4rem);width:100%}
@@ -387,7 +394,7 @@
   .v2-ba{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm)}
   .v2-ba-pair{display:grid;grid-template-columns:1fr 1fr;gap:3px}
   .v2-ba-pair .ph{aspect-ratio:1/1;justify-content:flex-end}
-  .v2-ba-pair .ph.before{background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(19,50,31,.62)),url("https://loremflickr.com/800/800/pine,forest?lock=65") center/cover no-repeat,#1a3d27}
+  .v2-ba-pair .ph.before{background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(19,50,31,.62)),url("https://loremflickr.com/800/800/pine,forest?lock=64") center/cover no-repeat,#1a3d27}
   .v2-ba-pair .ph.after{background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(19,50,31,.55)),url("https://loremflickr.com/800/800/pine,forest?lock=65") center/cover no-repeat,#1a3d27}
   .v2-flag{position:absolute;top:10px;left:10px;z-index:2;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;padding:.26rem .55rem;border-radius:2px;font-weight:700}
   .v2-flag.b{background:rgba(0,0,0,.55);color:#fff}
@@ -542,7 +549,7 @@
       <div class="ph-sub">Drop in a short looping clip — a mulcher working a lot, or slow drone footage over cleared land.</div>
     </div>
     <!-- Hero background. The photo poster fills the space now; to go animated later, add a <source src="/hero.mp4" type="video/mp4"> inside this <video>. -->
-    <video class="hero-video" autoplay muted loop playsinline poster="https://loremflickr.com/1600/900/pine,forest?lock=65"></video>
+    <video class="hero-video" autoplay muted loop playsinline poster="https://loremflickr.com/1600/900/wildfire?lock=70"></video>
   </div>
   <div class="wrap">
     <div class="hero-inner">
@@ -900,7 +907,7 @@
         <div class="ph-sub">Short looping clip of cleared, restored land.</div>
       </div>
       <!-- Hero background. Photo poster fills the space now; add a <source> inside to go animated later. -->
-      <video class="v2-hero-video" autoplay muted loop playsinline poster="https://loremflickr.com/1600/900/pine,forest?lock=65"></video>
+      <video class="v2-hero-video" autoplay muted loop playsinline poster="https://loremflickr.com/1600/900/wildfire?lock=72"></video>
     </div>
     <div class="wrap">
       <div class="v2-hero-inner">
@@ -1134,9 +1141,8 @@
     document.body.classList.toggle('show-v2',v==='2');
     tBtns.forEach(b=>b.classList.toggle('active',b.dataset.layout===v));
     closeNav();
-    if(v==='2'){ // force-reveal the now-visible layout so nothing stays hidden
-      document.querySelectorAll('#layout-two .reveal').forEach(el=>el.classList.add('in'));
-    }
+    // (v2 reveals are left to the IntersectionObserver so they animate on scroll
+    //  instead of appearing pre-revealed)
     if(save){try{localStorage.setItem(KEY,v);}catch(e){}}
   }
   let saved='1';try{saved=localStorage.getItem(KEY)||'1';}catch(e){}
