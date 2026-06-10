@@ -118,8 +118,8 @@
     transition:transform .18s ease,box-shadow .18s ease,background .18s ease,border-color .18s ease;
   }
   .btn svg{width:18px;height:18px}
-  .btn-primary{background:var(--ember);color:#fff;box-shadow:0 12px 26px -12px rgba(210,86,30,.85)}
-  .btn-primary:hover{background:var(--ember-dark);transform:translateY(-2px);box-shadow:0 18px 32px -12px rgba(210,86,30,.9)}
+  .btn-primary{background:var(--ember);color:#fff}
+  .btn-primary:hover{background:var(--ember-dark);transform:translateY(-2px)}
   .btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.38)}
   .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08);transform:translateY(-2px)}
   .btn-dark{background:var(--pine-900);color:var(--bone)}
@@ -334,11 +334,13 @@
      =================================================================== */
   /* Option 2 type pairing: Clash Display (display) + Satoshi (body), scoped to #layout-two */
   #layout-two{--font-display:'Clash Display',system-ui,sans-serif;--font-sans:'Satoshi',system-ui,-apple-system,sans-serif;font-family:var(--font-sans)}
+  /* Clash Display reads heavy at 700 — use a lighter weight for Option 2 headings */
+  #layout-two h1,#layout-two h2,#layout-two .display{font-weight:500;letter-spacing:-.01em}
   .v2-eyebrow{font-family:var(--font-sans);text-transform:uppercase;letter-spacing:.22em;font-weight:700;font-size:.74rem;color:var(--leaf);display:inline-block}
   .v2-eyebrow.light{color:var(--leaf-soft)}
   /* (headings default to --ink via the global ramp; dark-bg sections opt into #fff below) */
-  .v2-btn{background:var(--leaf);color:#fff;box-shadow:0 12px 26px -12px rgba(47,143,78,.85)}
-  .v2-btn:hover{background:var(--leaf-dark);transform:translateY(-2px);box-shadow:0 18px 32px -12px rgba(47,143,78,.9)}
+  .v2-btn{background:var(--leaf);color:#fff}
+  .v2-btn:hover{background:var(--leaf-dark);transform:translateY(-2px)}
   .v2-btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.45)}
   .v2-btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08);transform:translateY(-2px)}
 
@@ -362,7 +364,7 @@
   .v2-hero .wrap{position:relative;z-index:3;padding-block:clamp(4rem,8vw,6.5rem) clamp(2.5rem,5vw,4rem);width:100%}
   .v2-hero-inner{max-width:760px}
   .v2-hero h1{color:#fff;font-size:clamp(2.6rem,5.4vw,4.2rem);font-weight:700;line-height:1.03;margin:var(--s3) 0 var(--s3);text-shadow:0 2px 24px rgba(0,0,0,.45)}
-  .v2-hero h1 .accent{color:var(--leaf-soft);font-weight:700}
+  .v2-hero h1 .accent{color:var(--leaf-soft);font-weight:600}
   .v2-hero .lead{color:#eef6ec;max-width:600px;text-shadow:0 1px 14px rgba(0,0,0,.5)}
   .v2-actions{display:flex;gap:var(--s2);margin:var(--s4) 0 var(--s4);flex-wrap:wrap}
   .v2-points{display:flex;flex-wrap:wrap;gap:.7rem 1.6rem;list-style:none;padding-top:var(--s2);border-top:1px solid rgba(255,255,255,.14)}
