@@ -20,6 +20,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://accesstechnw.com/">
 <link rel="canonical" href="https://accesstechnw.com/">
+<link rel="preload" as="image" href="/images/mulcher-cleared-area.webp">
 <!-- TODO: replace with a real, branded 1200x630 social share image before launch (free stock placeholder for now) -->
 <meta property="og:image" content="https://accesstechnw.com/images/og-image.jpg">
 
@@ -52,10 +53,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<!-- Option 2 type pairing: Cabinet Grotesk + Satoshi (Fontshare) -->
-<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
-<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
-<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700&f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
 <style>
   :root{
     /* ---- palette ---- */
@@ -185,7 +182,7 @@
   /* ===================== HERO ===================== */
   .hero{min-height:92vh;display:flex;align-items:flex-end;color:#fff;position:relative;background:var(--pine-900);overflow:hidden}
   .hero-bg{position:absolute;inset:0;z-index:0}
-  .hero-bg .ph{position:absolute;inset:0;height:100%;border:none;background:url("/images/mulcher-cleared-area.jpg") center/cover no-repeat,#1c2a22;z-index:0}
+  .hero-bg .ph{position:absolute;inset:0;height:100%;border:none;background:url("/images/mulcher-cleared-area.webp") center/cover no-repeat,#1c2a22;z-index:0}
   /* looping background video sits above the placeholder; if it fails to load the .ph shows through */
   .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
   /* keep the gradient backdrop but drop the placeholder label/icon sitting behind the hero copy */
@@ -237,7 +234,7 @@
   .cred .k{font-family:var(--font-sans);text-transform:uppercase;letter-spacing:.14em;font-size:.66rem;color:var(--ember-dark);font-weight:700}
   .cred .v{font-family:var(--font-sans);font-weight:600;font-size:1.02rem;color:var(--ink);margin-top:.3rem;line-height:1.25}
   .about-visual{position:relative;margin-bottom:24px}
-  .about-visual .ph{aspect-ratio:4/5;border-radius:var(--radius-lg);background:linear-gradient(180deg,rgba(13,28,20,.28),rgba(13,28,20,.58)),url("/images/mulcher-at-work.jpg") center/cover no-repeat,#16291f}
+  .about-visual .ph{aspect-ratio:4/5;border-radius:var(--radius-lg);background:linear-gradient(180deg,rgba(13,28,20,.28),rgba(13,28,20,.58)),url("/images/mulcher-at-work.webp") center/cover no-repeat,#16291f}
   .about-badge{position:absolute;bottom:-24px;left:-20px;background:var(--ember);color:#fff;padding:1.15rem 1.4rem;border-radius:var(--radius);box-shadow:var(--shadow)}
   .about-badge .n{font-family:var(--font-display);font-optical-sizing:auto;font-weight:600;font-size:1.7rem;line-height:1}
   .about-badge .t{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:600;margin-top:.3rem}
@@ -378,7 +375,7 @@
   /* hero */
   .v2-hero{position:relative;color:#fff;background:var(--leaf-deep);overflow:hidden;min-height:84vh;display:flex;align-items:flex-end}
   .v2-hero-bg{position:absolute;inset:0;z-index:0}
-  .v2-hero-bg .ph{position:absolute;inset:0;height:100%;border:none;background:url("/images/mulcher-cleared-area.jpg") center/cover no-repeat,#18331f;z-index:0}
+  .v2-hero-bg .ph{position:absolute;inset:0;height:100%;border:none;background:url("/images/mulcher-cleared-area.webp") center/cover no-repeat,#18331f;z-index:0}
   .v2-hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
   .v2-hero-bg::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(19,50,31,.4),rgba(19,50,31,.3) 40%,rgba(19,50,31,.85) 82%,rgba(19,50,31,.96)),linear-gradient(90deg,rgba(19,50,31,.82),rgba(19,50,31,.22) 72%)}
   .v2-hero .wrap{position:relative;z-index:3;padding-block:clamp(4rem,8vw,6.5rem) clamp(2.5rem,5vw,4rem);width:100%}
@@ -457,7 +454,7 @@
   .v2-foot-base{border-top:1px solid rgba(255,255,255,.12);margin-top:var(--s4);padding-top:var(--s3);font-size:.8rem;color:#84a888;text-align:center}
 
   /* ===================== VERSION TOGGLE (bottom) ===================== */
-  .vtoggle{
+  .vtoggle{display:none;
     position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:200;
     display:flex;gap:4px;background:rgba(13,28,20,.92);backdrop-filter:blur(10px);
     border:1px solid rgba(255,255,255,.16);padding:5px;border-radius:999px;
@@ -572,7 +569,7 @@
       <div class="ph-sub">Drop in a short looping clip — a mulcher working a lot, or slow drone footage over cleared land.</div>
     </div>
     <!-- Hero background. The photo poster fills the space now; to go animated later, add a <source src="/hero.mp4" type="video/mp4"> inside this <video>. -->
-    <video class="hero-video" autoplay muted loop playsinline poster="/images/mulcher-cleared-area.jpg"></video>
+    <video class="hero-video" autoplay muted loop playsinline poster="/images/mulcher-cleared-area.webp"></video>
   </div>
   <div class="wrap">
     <div class="hero-inner">
@@ -929,7 +926,7 @@
         <div class="ph-sub">Short looping clip of cleared, restored land.</div>
       </div>
       <!-- Hero background. Photo poster fills the space now; add a <source> inside to go animated later. -->
-      <video class="v2-hero-video" autoplay muted loop playsinline poster="/images/mulcher-cleared-area.jpg"></video>
+      <video class="v2-hero-video" autoplay muted loop playsinline poster="/images/mulcher-cleared-area.webp"></video>
     </div>
     <div class="wrap">
       <div class="v2-hero-inner">
@@ -1171,7 +1168,7 @@
     //  instead of appearing pre-revealed)
     if(save){try{localStorage.setItem(KEY,v);}catch(e){}}
   }
-  let saved='1';try{saved=localStorage.getItem(KEY)||'1';}catch(e){}
+  let saved='1'; /* toggle hidden — always show the full layout */
   setLayout(saved,false);
   tBtns.forEach(b=>b.addEventListener('click',()=>{setLayout(b.dataset.layout,true);window.scrollTo({top:0,behavior:'smooth'});}));
 
