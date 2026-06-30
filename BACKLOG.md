@@ -106,3 +106,19 @@ Status key: ☐ todo · ◐ in progress · ✓ done · ⏸ deferred
 1. Finish Access Tech (Section 0) · 2. Forms (1) · 3. Host + domain (2, 3) ·
 4. Stripe (8) · 5. Launch + onboard (Section 10 checklist).
 Everything else is Phase 1+/deferred.
+
+---
+
+## Design / QA pass (latest) — Access Tech
+**Done**
+- ✓ Icons migrated to **Lucide** (48 icons, `data-lucide`), brand marks kept as SVG
+- ✓ Contrast fix: green text/eyebrows/labels on light bg now use `--ember-dark` (WCAG AA)
+- ✓ Logo `<img>` `max-width` guard + smaller on mobile; fixed-toggle no longer covers footer (mobile body padding); Option 2 hero mobile min-height added
+- ✓ Build-anatomy + SOP docs added under `/docs`
+
+**New open items surfaced**
+- ☐ Self-host the **gallery before/after + service-area map** images (still hot-link LoremFlickr) — pending Phil's real before/after pairs
+- ☐ Add **robots.txt, sitemap.xml, canonical** (need final domain) + a **privacy policy** page
+- ☐ Add lightweight **analytics** (Plausible/Umami)
+- ☐ **Pin or self-host Lucide** (currently CDN `@latest`) to remove the runtime dependency
+- ☐ At launch: strip to one layout + remove the redundant token set (`--ember*` and `--leaf*` are identical greens) and unused font pair

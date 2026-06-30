@@ -117,7 +117,7 @@
 
   .eyebrow{
     font-family:var(--font-sans);text-transform:uppercase;letter-spacing:.22em;
-    font-weight:700;font-size:.74rem;color:var(--ember);display:inline-block;
+    font-weight:700;font-size:.74rem;color:var(--ember-dark);display:inline-block;
   }
   .eyebrow.light{color:var(--ember-soft)}
 
@@ -173,7 +173,7 @@
   .brand .mark{width:40px;height:40px;flex:none}
   .brand .bname,.v2-brand .bname{font-family:var(--font-display);font-optical-sizing:auto;font-weight:700;font-size:1.32rem;line-height:1;letter-spacing:-.015em;display:block}
   .brand .bsub,.v2-brand .bsub{display:block;font-family:var(--font-sans);font-size:.58rem;letter-spacing:.28em;color:var(--moss-300);text-transform:uppercase;margin-top:3px;font-weight:600;line-height:1}
-  .brand-logo{height:40px;width:auto;display:block}
+  .brand-logo{height:40px;width:auto;max-width:60vw;display:block}
   footer .brand-logo{height:38px}
   nav.menu{display:flex;align-items:center;gap:2rem}
   nav.menu a{font-family:var(--font-sans);font-size:.96rem;font-weight:500;color:#dfe7d8;position:relative;padding:.2rem 0}
@@ -236,7 +236,7 @@
   .about-copy p.body:last-of-type{margin-bottom:0}
   .creds{display:grid;grid-template-columns:1fr 1fr;gap:var(--s2);margin-top:var(--s4)}
   .cred{background:#fff;border:1px solid var(--line);border-left:3px solid var(--ember);padding:1.1rem 1.3rem;border-radius:var(--radius);box-shadow:var(--shadow-sm)}
-  .cred .k{font-family:var(--font-sans);text-transform:uppercase;letter-spacing:.14em;font-size:.66rem;color:var(--ember);font-weight:700}
+  .cred .k{font-family:var(--font-sans);text-transform:uppercase;letter-spacing:.14em;font-size:.66rem;color:var(--ember-dark);font-weight:700}
   .cred .v{font-family:var(--font-sans);font-weight:600;font-size:1.02rem;color:var(--ink);margin-top:.3rem;line-height:1.25}
   .about-visual{position:relative;margin-bottom:24px}
   .about-visual .ph{aspect-ratio:4/5;border-radius:var(--radius-lg);background:linear-gradient(180deg,rgba(13,28,20,.28),rgba(13,28,20,.58)),url("/images/mulcher-at-work.jpg") center/cover no-repeat,#16291f}
@@ -259,7 +259,7 @@
   .svc p{font-size:.96rem;color:var(--moss-300);line-height:1.6}
 
   /* ===================== BEFORE & AFTER ===================== */
-  .ba-note{display:inline-flex;align-items:center;gap:.5rem;background:rgba(47,143,78,.1);border:1px solid rgba(47,143,78,.25);color:var(--ember);padding:.55rem 1rem;border-radius:2rem;font-size:.8rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-top:var(--s3)}
+  .ba-note{display:inline-flex;align-items:center;gap:.5rem;background:rgba(47,143,78,.1);border:1px solid rgba(47,143,78,.25);color:var(--ember-dark);padding:.55rem 1rem;border-radius:2rem;font-size:.8rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-top:var(--s3)}
   .ba-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s4)}
   .ba-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm)}
   .ba-pair{display:grid;grid-template-columns:1fr 1fr;gap:3px;background:#fff}
@@ -309,17 +309,17 @@
   .fld{margin-bottom:var(--s3)}
   .frow{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3)}
   label{display:block;font-family:var(--font-sans);text-transform:uppercase;letter-spacing:.09em;font-size:.72rem;font-weight:700;color:var(--bark);margin-bottom:.5rem}
-  label .req{color:var(--ember)}
+  label .req{color:var(--ember-dark)}
   label .opt{color:#8a8473;font-weight:500;text-transform:none;letter-spacing:0}
   input,textarea,select{
     width:100%;font-family:var(--font-sans);font-size:.98rem;color:var(--ink);
     padding:.85rem .95rem;border:1px solid #cfc6b0;border-radius:var(--radius);background:var(--bone);
     transition:border-color .15s ease,box-shadow .15s ease,background .15s ease;
   }
-  input:focus,textarea:focus,select:focus{outline:none;border-color:var(--ember);box-shadow:0 0 0 3px rgba(47,143,78,.14);background:#fff}
+  input:focus,textarea:focus,select:focus{outline:none;border-color:var(--ember-dark);box-shadow:0 0 0 3px rgba(47,143,78,.14);background:#fff}
   textarea{resize:vertical;min-height:120px}
   .file-drop{border:1.5px dashed #cfc6b0;border-radius:var(--radius);padding:1.4rem;text-align:center;background:var(--bone);color:var(--ink-soft);font-size:.92rem;display:flex;flex-direction:column;align-items:center;gap:.55rem;cursor:pointer;transition:border-color .15s ease}
-  .file-drop:hover{border-color:var(--ember)}
+  .file-drop:hover{border-color:var(--ember-dark)}
   .file-drop svg{width:26px;height:26px;color:var(--moss-500)}
   .file-drop small{color:#8a8473}
   form.est .btn{width:100%;justify-content:center;margin-top:var(--s2);padding:1.1rem}
@@ -492,6 +492,9 @@
     .v2-cta-grid{grid-template-columns:1fr;gap:var(--s5)}
   }
   @media(max-width:680px){
+    body{padding-bottom:84px} /* clear fixed layout toggle */
+    .brand-logo{height:34px}
+    .v2-hero{min-height:72vh}
     /* full-screen overlay nav (Option 1) */
     nav.menu{
       position:fixed;inset:0;width:100%;max-width:none;height:100vh;height:100dvh;
@@ -534,8 +537,8 @@
 <div class="utility">
   <div class="wrap">
     <div class="u-phones">
-      <a href="tel:2085008988"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> ID&nbsp;208-500-8988</a>
-      <a href="tel:5097890371"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> WA&nbsp;509-789-0371</a>
+      <a href="tel:2085008988"><i data-lucide="phone"></i> ID&nbsp;208-500-8988</a>
+      <a href="tel:5097890371"><i data-lucide="phone"></i> WA&nbsp;509-789-0371</a>
     </div>
     <div class="u-area">Serving North Idaho &amp; Eastern Washington</div>
   </div>
@@ -561,7 +564,7 @@
 <section class="hero" id="top">
   <div class="hero-bg">
     <div class="ph">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m21 16-4 4-4-4"/><path d="M17 20V4"/><path d="m3 8 4-4 4 4"/><path d="M7 4v16"/></svg>
+      <i data-lucide="image"></i>
       <div class="ph-tag">Hero Video / Photo</div>
       <div class="ph-sub">Drop in a short looping clip — a mulcher working a lot, or slow drone footage over cleared land.</div>
     </div>
@@ -576,7 +579,7 @@
       <div class="hero-actions">
         <a class="btn btn-primary" href="#estimate">
           Request a Free Estimate
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          <i data-lucide="arrow-right"></i>
         </a>
         <a class="btn btn-ghost" href="#services">View Services</a>
       </div>
@@ -587,10 +590,10 @@
 <!-- ============ TRUST BAND ============ -->
 <section class="trust">
   <div class="wrap">
-    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg><b>Degreed Forester</b></div>
-    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg><b>Wildfire-Risk Focused</b></div>
-    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><b>Local to ID &amp; WA</b></div>
-    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><b>Free On-Site Estimates</b></div>
+    <div class="trust-item"><i data-lucide="graduation-cap"></i><b>Degreed Forester</b></div>
+    <div class="trust-item"><i data-lucide="shield"></i><b>Wildfire-Risk Focused</b></div>
+    <div class="trust-item"><i data-lucide="map-pin"></i><b>Local to ID &amp; WA</b></div>
+    <div class="trust-item"><i data-lucide="clipboard-check"></i><b>Free On-Site Estimates</b></div>
   </div>
 </section>
 
@@ -610,7 +613,7 @@
       </div>
       <div class="about-visual reveal">
         <div class="ph">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+          <i data-lucide="user"></i>
           <div class="ph-tag">Owner / Equipment Photo</div>
           <div class="ph-sub">A portrait of you on-site or with the machine builds trust.</div>
         </div>
@@ -634,47 +637,47 @@
     </div>
     <div class="svc-grid">
       <div class="svc reveal">
-        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 8 8h8z"/><path d="M12 7 7 14h10z"/><path d="M12 12 6 20h12z"/><line x1="12" y1="20" x2="12" y2="22"/></svg></div>
+        <div class="svc-ic"><i data-lucide="trees"></i></div>
         <h3>Forestry Mulching</h3>
         <p>Grind brush, saplings, and overgrowth into nutrient-rich mulch in a single pass — no piles, no burning.</p>
       </div>
       <div class="svc reveal">
-        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div>
+        <div class="svc-ic"><i data-lucide="flame"></i></div>
         <h3>Fuel Reduction</h3>
         <p>Reduce the ladder fuels and dense vegetation that let wildfire climb and spread across your land.</p>
       </div>
       <div class="svc reveal">
-        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="M12 8c.6 1.4 1.5 1.8 1.5 3a1.5 1.5 0 1 1-3 0c0-.7.3-1.1.7-1.5"/></svg></div>
+        <div class="svc-ic"><i data-lucide="shield-alert"></i></div>
         <h3>Fire Mitigation</h3>
         <p>Create defensible space around homes and structures to give your property a fighting chance.</p>
       </div>
       <div class="svc reveal">
-        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4 9 2"/><path d="m5 13 8-8"/><path d="M3 21c0-4 2-7 6-8"/><path d="M13.5 6.5 17 3l4 4-3.5 3.5"/><path d="m14 10 3 3"/></svg></div>
+        <div class="svc-ic"><i data-lucide="axe"></i></div>
         <h3>Property Cleanup</h3>
         <p>Clear years of overgrowth, deadfall, and debris to reclaim ground you can actually use.</p>
       </div>
       <div class="svc reveal">
-        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3 4 8h6z"/><path d="M7 7 5 11h4z"/><line x1="7" y1="11" x2="7" y2="14"/><path d="M16 14h5"/><path d="M16 18h5"/><path d="M13 22h8"/></svg></div>
+        <div class="svc-ic"><i data-lucide="list-tree"></i></div>
         <h3>Understory Thinning</h3>
         <p>Selectively thin crowded understory to improve forest health and let your best trees thrive.</p>
       </div>
       <div class="svc reveal">
-        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M7 22c0-5 1-7 3-9s3-4 3-8"/><path d="M7 22c0-3-.5-5-2-7"/><path d="M13 5c1.5.5 3 1 4 .5"/><path d="M11 11c1.5.5 3 .5 4-.5"/></svg></div>
+        <div class="svc-ic"><i data-lucide="footprints"></i></div>
         <h3>Trail Creation</h3>
         <p>Open up walking, riding, and recreational trails that make your acreage enjoyable and accessible.</p>
       </div>
       <div class="svc reveal">
-        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M9 22 11 2"/><path d="M15 22 13 2"/><line x1="12" y1="5" x2="12" y2="8"/><line x1="12" y1="11" x2="12" y2="14"/><line x1="12" y1="17" x2="12" y2="20"/></svg></div>
+        <div class="svc-ic"><i data-lucide="route"></i></div>
         <h3>Access Improvements</h3>
         <p>Build and widen access routes so you, your equipment, and emergency services can get where you need to go.</p>
       </div>
       <div class="svc reveal">
-        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5 6 10h6z"/><line x1="9" y1="10" x2="9" y2="14"/><circle cx="17" cy="8" r="4"/><line x1="15" y1="8" x2="19" y2="8"/></svg></div>
+        <div class="svc-ic"><i data-lucide="scissors"></i></div>
         <h3>Small Tree Removal</h3>
         <p>Remove unwanted small trees and saplings without tearing up the ground you want to keep.</p>
       </div>
       <div class="svc reveal">
-        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="6" r="2.5"/><path d="M2 19c3-5 6-2 9-6s7-2 11-5"/><path d="M2 22c4-5 8-3 11-6"/></svg></div>
+        <div class="svc-ic"><i data-lucide="sprout"></i></div>
         <h3>Land Improvement</h3>
         <p>Turn neglected acreage into healthy, productive, maintainable land that works for how you live.</p>
       </div>
@@ -727,19 +730,19 @@
     </div>
     <div class="why-grid">
       <div class="why reveal">
-        <div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+        <div class="why-ic"><i data-lucide="graduation-cap"></i></div>
         <div><h3>A real forestry background</h3><p>Degrees in Forest Resource Management and Fire Ecology &amp; Management mean decisions are grounded in how forests actually work — not guesswork.</p></div>
       </div>
       <div class="why reveal">
-        <div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></div>
+        <div class="why-ic"><i data-lucide="shield"></i></div>
         <div><h3>Focused on protection</h3><p>The aim is improving your property and reducing wildfire risk — creating usable, maintainable space, not just stripping the land bare.</p></div>
       </div>
       <div class="why reveal">
-        <div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div class="why-ic"><i data-lucide="map-pin"></i></div>
         <div><h3>Local to the terrain</h3><p>We know the ground, the fuel types, and the fire conditions specific to North Idaho and Eastern Washington.</p></div>
       </div>
       <div class="why reveal">
-        <div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="4"/></svg></div>
+        <div class="why-ic"><i data-lucide="settings"></i></div>
         <div><h3>Practical, lasting results</h3><p>Effective solutions that improve the health, usability, and safety of your property — work you can actually maintain over time.</p></div>
       </div>
     </div>
@@ -756,8 +759,8 @@
         <h2>Service Area</h2>
         <p>Proudly serving rural homeowners, landowners, recreational property owners, timberland owners, and communities throughout North Idaho and Eastern Washington.</p>
         <div class="area-tags">
-          <span class="area-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>North Idaho</span>
-          <span class="area-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Eastern Washington</span>
+          <span class="area-tag"><i data-lucide="map-pin"></i>North Idaho</span>
+          <span class="area-tag"><i data-lucide="map-pin"></i>Eastern Washington</span>
           <span class="area-tag">Rural Homeowners</span>
           <span class="area-tag">Acreage &amp; Timberland</span>
           <span class="area-tag">HOAs &amp; Communities</span>
@@ -766,7 +769,7 @@
       </div>
       <div class="area-map reveal">
         <div class="ph">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="m3 6 6-2 6 2 6-2v14l-6 2-6-2-6 2z"/><path d="M9 4v16M15 6v16"/></svg>
+          <i data-lucide="map"></i>
           <div class="ph-tag">Service-Area Map</div>
           <div class="ph-sub">Optional: a simple map of North ID / Eastern WA with your coverage area shaded.</div>
         </div>
@@ -786,11 +789,11 @@
         <h2>Request a free estimate</h2>
         <p>Tell us about your property and project. Send a few photos if you can — it helps us give you a faster, more accurate estimate.</p>
         <a class="phone-card" href="tel:2085008988">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <i data-lucide="phone"></i>
           <div><div class="pk">Idaho</div><div class="pv">208-500-8988</div></div>
         </a>
         <a class="phone-card" href="tel:5097890371">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <i data-lucide="phone"></i>
           <div><div class="pk">Washington</div><div class="pv">509-789-0371</div></div>
         </a>
       </div>
@@ -821,7 +824,7 @@
         <div class="fld"><label>Description of Project <span class="req">*</span></label><textarea name="message" placeholder="Tell us what you're hoping to do — fuel reduction, cleanup, trails, access, etc." required></textarea></div>
         <div class="fld"><label>Photo Upload <span class="opt">(optional)</span></label>
           <label class="file-drop">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m17 8-5-5-5 5"/><path d="M12 3v12"/></svg>
+            <i data-lucide="upload"></i>
             <span>Add a photo of your property</span>
             <small>JPG or PNG, up to 16MB</small>
             <input type="file" name="attachment" accept="image/*" style="display:none">
@@ -829,7 +832,7 @@
         </div>
         <button class="btn btn-primary" type="submit">
           Request My Free Estimate
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          <i data-lucide="arrow-right"></i>
         </button>
         <p class="form-foot" id="estimate-status">We'll get back to you quickly — usually within a day or two.</p>
       </form>
@@ -889,8 +892,8 @@
   <div class="utility">
     <div class="wrap">
       <div class="u-phones">
-        <a href="tel:2085008988"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> ID&nbsp;208-500-8988</a>
-        <a href="tel:5097890371"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> WA&nbsp;509-789-0371</a>
+        <a href="tel:2085008988"><i data-lucide="phone"></i> ID&nbsp;208-500-8988</a>
+        <a href="tel:5097890371"><i data-lucide="phone"></i> WA&nbsp;509-789-0371</a>
       </div>
       <div class="u-area">Serving North Idaho &amp; Eastern Washington</div>
     </div>
@@ -917,7 +920,7 @@
   <section class="v2-hero" id="v2-top">
     <div class="v2-hero-bg">
       <div class="ph">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m21 16-4 4-4-4"/><path d="M17 20V4"/><path d="m3 8 4-4 4 4"/><path d="M7 4v16"/></svg>
+        <i data-lucide="image"></i>
         <div class="ph-tag">Hero Video / Photo</div>
         <div class="ph-sub">Short looping clip of cleared, restored land.</div>
       </div>
@@ -934,10 +937,10 @@
           <a class="btn v2-btn-ghost" href="tel:2085008988">Call 208-500-8988</a>
         </div>
         <ul class="v2-points">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Degreed forester</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Wildfire-risk focused</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Local to ID &amp; WA</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Free on-site estimates</li>
+          <li><i data-lucide="check"></i>Degreed forester</li>
+          <li><i data-lucide="check"></i>Wildfire-risk focused</li>
+          <li><i data-lucide="check"></i>Local to ID &amp; WA</li>
+          <li><i data-lucide="check"></i>Free on-site estimates</li>
         </ul>
       </div>
     </div>
@@ -952,32 +955,32 @@
       </div>
       <div class="v2-svc-grid">
         <div class="v2-svc reveal">
-          <div class="v2-svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 8 8h8z"/><path d="M12 7 7 14h10z"/><path d="M12 12 6 20h12z"/><line x1="12" y1="20" x2="12" y2="22"/></svg></div>
+          <div class="v2-svc-ic"><i data-lucide="trees"></i></div>
           <h3>Forestry Mulching</h3>
           <p>Brush and overgrowth ground to mulch in one pass.</p>
         </div>
         <div class="v2-svc reveal">
-          <div class="v2-svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div>
+          <div class="v2-svc-ic"><i data-lucide="flame"></i></div>
           <h3>Fuel Reduction</h3>
           <p>Cut the ladder fuels that let wildfire spread.</p>
         </div>
         <div class="v2-svc reveal">
-          <div class="v2-svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></div>
+          <div class="v2-svc-ic"><i data-lucide="shield"></i></div>
           <h3>Fire Mitigation</h3>
           <p>Defensible space around homes and structures.</p>
         </div>
         <div class="v2-svc reveal">
-          <div class="v2-svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4 9 2"/><path d="m5 13 8-8"/><path d="M3 21c0-4 2-7 6-8"/><path d="M13.5 6.5 17 3l4 4-3.5 3.5"/><path d="m14 10 3 3"/></svg></div>
+          <div class="v2-svc-ic"><i data-lucide="axe"></i></div>
           <h3>Property Cleanup</h3>
           <p>Clear overgrowth, deadfall, and debris.</p>
         </div>
         <div class="v2-svc reveal">
-          <div class="v2-svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3 4 8h6z"/><path d="M7 7 5 11h4z"/><line x1="7" y1="11" x2="7" y2="14"/><path d="M16 14h5"/><path d="M16 18h5"/><path d="M13 22h8"/></svg></div>
+          <div class="v2-svc-ic"><i data-lucide="list-tree"></i></div>
           <h3>Understory Thinning</h3>
           <p>Thin crowded growth so your best trees thrive.</p>
         </div>
         <div class="v2-svc reveal">
-          <div class="v2-svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M7 22c0-5 1-7 3-9s3-4 3-8"/><path d="M7 22c0-3-.5-5-2-7"/><path d="M13 5c1.5.5 3 1 4 .5"/><path d="M11 11c1.5.5 3 .5 4-.5"/></svg></div>
+          <div class="v2-svc-ic"><i data-lucide="footprints"></i></div>
           <h3>Trail Creation</h3>
           <p>Walking, riding, and recreational trails.</p>
         </div>
@@ -1029,17 +1032,17 @@
       </div>
       <div class="v2-why-grid">
         <div class="v2-why reveal">
-          <div class="v2-why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+          <div class="v2-why-ic"><i data-lucide="graduation-cap"></i></div>
           <h3>A real forestry background</h3>
           <p>Degrees in Forest Resource Management and Fire Ecology &amp; Management — decisions grounded in how forests work.</p>
         </div>
         <div class="v2-why reveal">
-          <div class="v2-why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></div>
+          <div class="v2-why-ic"><i data-lucide="shield"></i></div>
           <h3>Focused on protection</h3>
           <p>Reducing wildfire risk and creating usable, maintainable space — not just stripping the land bare.</p>
         </div>
         <div class="v2-why reveal">
-          <div class="v2-why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="v2-why-ic"><i data-lucide="map-pin"></i></div>
           <h3>Local to the terrain</h3>
           <p>We know the ground, fuel types, and fire conditions specific to North Idaho and Eastern Washington.</p>
         </div>
@@ -1056,11 +1059,11 @@
           <h2>Request a free estimate</h2>
           <p>Tell us about your property and project — we'll get back to you quickly, usually within a day or two.</p>
           <a class="v2-phone-card" href="tel:2085008988">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <i data-lucide="phone"></i>
             <div><div class="pk">Idaho</div><div class="pv">208-500-8988</div></div>
           </a>
           <a class="v2-phone-card" href="tel:5097890371">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <i data-lucide="phone"></i>
             <div><div class="pk">Washington</div><div class="pv">509-789-0371</div></div>
           </a>
           <div class="v2-area-tags">
@@ -1091,7 +1094,7 @@
           <div class="fld"><label>Description of Project <span class="req">*</span></label><textarea placeholder="Fuel reduction, cleanup, trails, access, etc." required></textarea></div>
           <button class="btn v2-btn" type="submit">
             Request My Free Estimate
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            <i data-lucide="arrow-right"></i>
           </button>
           <p class="form-foot">We'll get back to you quickly — usually within a day or two.</p>
         </form>
@@ -1189,5 +1192,8 @@
     });
   }
 </script>
+<!-- Lucide icons (renders all data-lucide elements) -->
+<script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+<script>window.lucide&&lucide.createIcons();</script>
 </body>
 </html>
