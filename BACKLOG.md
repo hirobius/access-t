@@ -122,3 +122,14 @@ Everything else is Phase 1+/deferred.
 - ☐ Add lightweight **analytics** (Plausible/Umami)
 - ☐ **Pin or self-host Lucide** (currently CDN `@latest`) to remove the runtime dependency
 - ☐ At launch: strip to one layout + remove the redundant token set (`--ember*` and `--leaf*` are identical greens) and unused font pair
+
+---
+
+## Autonomous rough-edge sweep — done
+- ✓ Removed **all external image hot-links** (LoremFlickr) — Option 2 hero now self-hosted photo; gallery before/after + service-area map are clean styled placeholders (await Phil's real pairs); dropped the loremflickr preconnects
+- ✓ **SEO**: canonical + `og:url`, `robots.txt`, `sitemap.xml` (on accesstechnw.com)
+- ✓ **privacy.html** page (forms collect data) + footer links in both layouts
+- ✓ **404.html** branded not-found page
+- ✓ **Pinned Lucide** to a fixed version (no more CDN `@latest`)
+- ✓ **a11y**: visible `:focus-visible` outlines + "Skip to content" link
+- Still pending (need you/external): noindex off, Deployment Protection off, domain/DNS, promote to main, Stripe, real before/after photos, analytics

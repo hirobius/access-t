@@ -18,6 +18,8 @@
 <meta property="og:title" content="Access Tech — Forestry Mulching & Fuel Reduction | North Idaho & Eastern WA">
 <meta property="og:description" content="Professional forestry mulching, fuel reduction, and land improvement across North Idaho and Eastern Washington. Reduce wildfire risk and reclaim usable, maintainable land. Free on-site estimates.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://accesstechnw.com/">
+<link rel="canonical" href="https://accesstechnw.com/">
 <!-- TODO: replace with a real, branded 1200x630 social share image before launch (free stock placeholder for now) -->
 <meta property="og:image" content="https://accesstechnw.com/images/og-image.jpg">
 
@@ -49,10 +51,6 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- free stock imagery (LoremFlickr → Flickr CDN); swap for real photos at launch -->
-<link rel="preconnect" href="https://loremflickr.com">
-<link rel="preconnect" href="https://live.staticflickr.com" crossorigin>
-<link rel="dns-prefetch" href="https://loremflickr.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <!-- Option 2 type pairing: Cabinet Grotesk + Satoshi (Fontshare) -->
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
@@ -264,8 +262,8 @@
   .ba-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm)}
   .ba-pair{display:grid;grid-template-columns:1fr 1fr;gap:3px;background:#fff}
   .ba-pair .ph{aspect-ratio:1/1;justify-content:flex-end}
-  .ba-pair .ph.before{background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(13,28,20,.6)),url("https://loremflickr.com/800/800/pine,forest?lock=64") center/cover no-repeat,#1c3322}
-  .ba-pair .ph.after{background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(13,28,20,.55)),url("https://loremflickr.com/800/800/pine,forest?lock=65") center/cover no-repeat,#1c3322}
+  .ba-pair .ph.before{background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(13,28,20,.6)),#1c3322}
+  .ba-pair .ph.after{background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(13,28,20,.55)),#1c3322}
   .ba-flag{position:absolute;top:12px;left:12px;z-index:2;font-family:var(--font-sans);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;padding:.28rem .6rem;border-radius:2px;font-weight:700}
   .ba-flag.b{background:rgba(0,0,0,.55);color:#fff}
   .ba-flag.a{background:var(--ember);color:#fff}
@@ -289,7 +287,7 @@
   .area-tag{border:1px solid var(--line-light);border-radius:2rem;padding:.55rem 1rem;font-size:.88rem;color:#dfe7d8;display:flex;align-items:center;gap:.45rem}
   .area-tag svg{width:14px;height:14px;color:var(--ember-soft)}
   .area-map{position:relative;aspect-ratio:4/3;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--line-light);background:var(--pine-950)}
-  .area-map .ph{height:100%;background:linear-gradient(180deg,rgba(13,28,20,.32),rgba(13,28,20,.62)),url("https://loremflickr.com/1000/750/pine,forest?lock=65") center/cover no-repeat,#16291f;border-style:solid;border-color:var(--line-light)}
+  .area-map .ph{height:100%;background:linear-gradient(180deg,rgba(13,28,20,.32),rgba(13,28,20,.62)),#16291f;border-style:solid;border-color:var(--line-light)}
   .pin{position:absolute;display:flex;flex-direction:column;align-items:center;z-index:3;color:#fff}
   .pin .dot{width:14px;height:14px;border-radius:50%;background:var(--ember);box-shadow:0 0 0 6px rgba(47,143,78,.25);animation:pulse 2.4s infinite}
   .pin .lbl{font-family:var(--font-sans);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;margin-top:.45rem;background:rgba(0,0,0,.5);padding:.22rem .55rem;border-radius:2px}
@@ -380,7 +378,7 @@
   /* hero */
   .v2-hero{position:relative;color:#fff;background:var(--leaf-deep);overflow:hidden;min-height:84vh;display:flex;align-items:flex-end}
   .v2-hero-bg{position:absolute;inset:0;z-index:0}
-  .v2-hero-bg .ph{position:absolute;inset:0;height:100%;border:none;background:url("https://loremflickr.com/1600/900/wildfire?lock=72") center/cover no-repeat,#18331f;z-index:0}
+  .v2-hero-bg .ph{position:absolute;inset:0;height:100%;border:none;background:url("/images/mulcher-cleared-area.jpg") center/cover no-repeat,#18331f;z-index:0}
   .v2-hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
   .v2-hero-bg::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(19,50,31,.4),rgba(19,50,31,.3) 40%,rgba(19,50,31,.85) 82%,rgba(19,50,31,.96)),linear-gradient(90deg,rgba(19,50,31,.82),rgba(19,50,31,.22) 72%)}
   .v2-hero .wrap{position:relative;z-index:3;padding-block:clamp(4rem,8vw,6.5rem) clamp(2.5rem,5vw,4rem);width:100%}
@@ -418,8 +416,8 @@
   .v2-ba{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm)}
   .v2-ba-pair{display:grid;grid-template-columns:1fr 1fr;gap:3px}
   .v2-ba-pair .ph{aspect-ratio:1/1;justify-content:flex-end}
-  .v2-ba-pair .ph.before{background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(19,50,31,.62)),url("https://loremflickr.com/800/800/pine,forest?lock=64") center/cover no-repeat,#1a3d27}
-  .v2-ba-pair .ph.after{background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(19,50,31,.55)),url("https://loremflickr.com/800/800/pine,forest?lock=65") center/cover no-repeat,#1a3d27}
+  .v2-ba-pair .ph.before{background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(19,50,31,.62)),#1a3d27}
+  .v2-ba-pair .ph.after{background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(19,50,31,.55)),#1a3d27}
   .v2-flag{position:absolute;top:10px;left:10px;z-index:2;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;padding:.26rem .55rem;border-radius:2px;font-weight:700}
   .v2-flag.b{background:rgba(0,0,0,.55);color:#fff}
   .v2-flag.a{background:var(--leaf);color:#fff}
@@ -524,9 +522,14 @@
   @media(max-width:420px){
     .v2-svc-grid{grid-template-columns:1fr}
   }
+  /* a11y: visible keyboard focus + skip link */
+  a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,.btn:focus-visible,.vtoggle button:focus-visible{outline:2px solid var(--ember-dark);outline-offset:2px}
+  .skip-link{position:absolute;left:-999px;top:0;z-index:300;background:var(--ember-dark);color:#fff;padding:.65rem 1rem;border-radius:0 0 6px 0;font-family:var(--font-sans);font-weight:600}
+  .skip-link:focus{left:0}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#top">Skip to content</a>
 
 <!-- ============================================================= -->
 <!-- ============ OPTION ONE  (orange theme, full site) =========== -->
@@ -871,6 +874,7 @@
         <a class="fl" href="tel:5097890371">Washington — 509-789-0371</a>
         <a class="fl" href="#estimate">Request a Free Estimate</a>
         <a class="fl" href="https://accesstechnw.com">accesstechnw.com</a>
+        <a class="fl" href="/privacy.html">Privacy Policy</a>
       </div>
     </div>
     <div class="foot-bottom">
@@ -925,7 +929,7 @@
         <div class="ph-sub">Short looping clip of cleared, restored land.</div>
       </div>
       <!-- Hero background. Photo poster fills the space now; add a <source> inside to go animated later. -->
-      <video class="v2-hero-video" autoplay muted loop playsinline poster="https://loremflickr.com/1600/900/wildfire?lock=72"></video>
+      <video class="v2-hero-video" autoplay muted loop playsinline poster="/images/mulcher-cleared-area.jpg"></video>
     </div>
     <div class="wrap">
       <div class="v2-hero-inner">
@@ -1119,6 +1123,7 @@
         <a href="#v2-estimate">Free Estimate</a>
         <a href="tel:2085008988">208-500-8988</a>
         <a href="tel:5097890371">509-789-0371</a>
+        <a href="/privacy.html">Privacy</a>
       </nav>
     </div>
     <div class="wrap"><div class="v2-foot-base">© 2026 Access Tech — Forestry mulching &amp; fuel reduction · North Idaho &amp; Eastern Washington</div></div>
@@ -1193,7 +1198,7 @@
   }
 </script>
 <!-- Lucide icons (renders all data-lucide elements) -->
-<script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.460.0/dist/umd/lucide.min.js"></script>
 <script>window.lucide&&lucide.createIcons();</script>
 </body>
 </html>
