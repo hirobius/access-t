@@ -775,15 +775,20 @@
         </a>
       </div>
 
-      <form class="est" onsubmit="event.preventDefault();alert('This is a design preview — the live form will be built in Carrd.');">
+      <form class="est" id="estimate-form" action="https://api.web3forms.com/submit" method="POST">
+        <!-- Web3Forms: get a free access key at https://web3forms.com (enter adrian@hirobius.com) and paste it below. Submissions email to that address. -->
+        <input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_ACCESS_KEY">
+        <input type="hidden" name="subject" value="New estimate request — Access Tech website">
+        <input type="hidden" name="from_name" value="Access Tech Website">
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none">
         <div class="frow">
-          <div class="fld"><label>Name <span class="req">*</span></label><input type="text" placeholder="Your name" required></div>
-          <div class="fld"><label>Phone <span class="req">*</span></label><input type="tel" placeholder="(208) 000-0000" required></div>
+          <div class="fld"><label>Name <span class="req">*</span></label><input type="text" name="name" placeholder="Your name" required></div>
+          <div class="fld"><label>Phone <span class="req">*</span></label><input type="tel" name="phone" placeholder="(208) 000-0000" required></div>
         </div>
-        <div class="fld"><label>Email <span class="req">*</span></label><input type="email" placeholder="you@email.com" required></div>
-        <div class="fld"><label>Property Address</label><input type="text" placeholder="Street, city, state"></div>
+        <div class="fld"><label>Email <span class="req">*</span></label><input type="email" name="email" placeholder="you@email.com" required></div>
+        <div class="fld"><label>Property Address</label><input type="text" name="address" placeholder="Street, city, state"></div>
         <div class="fld"><label>Approximate Acreage</label>
-          <select>
+          <select name="acreage">
             <option value="" disabled selected>Select acreage</option>
             <option>Under 1 acre</option>
             <option>1–5 acres</option>
@@ -793,20 +798,20 @@
             <option>Not sure</option>
           </select>
         </div>
-        <div class="fld"><label>Description of Project <span class="req">*</span></label><textarea placeholder="Tell us what you're hoping to do — fuel reduction, cleanup, trails, access, etc." required></textarea></div>
+        <div class="fld"><label>Description of Project <span class="req">*</span></label><textarea name="message" placeholder="Tell us what you're hoping to do — fuel reduction, cleanup, trails, access, etc." required></textarea></div>
         <div class="fld"><label>Photo Upload <span class="opt">(optional)</span></label>
           <label class="file-drop">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m17 8-5-5-5 5"/><path d="M12 3v12"/></svg>
             <span>Add a photo of your property</span>
             <small>JPG or PNG, up to 16MB</small>
-            <input type="file" accept="image/*" style="display:none">
+            <input type="file" name="attachment" accept="image/*" style="display:none">
           </label>
         </div>
         <button class="btn btn-primary" type="submit">
           Request My Free Estimate
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </button>
-        <p class="form-foot">We'll get back to you quickly — usually within a day or two.</p>
+        <p class="form-foot" id="estimate-status">We'll get back to you quickly — usually within a day or two.</p>
       </form>
     </div>
   </div>
@@ -1141,6 +1146,28 @@
   let saved='1';try{saved=localStorage.getItem(KEY)||'1';}catch(e){}
   setLayout(saved,false);
   tBtns.forEach(b=>b.addEventListener('click',()=>{setLayout(b.dataset.layout,true);window.scrollTo({top:0,behavior:'smooth'});}));
+
+  /* ---- Estimate form → Web3Forms (AJAX, inline success/error) ---- */
+  const ef=document.getElementById('estimate-form');
+  if(ef){
+    ef.addEventListener('submit',async e=>{
+      e.preventDefault();
+      const status=document.getElementById('estimate-status');
+      const btn=ef.querySelector('button[type=submit]');
+      const orig=btn.innerHTML; btn.disabled=true; btn.textContent='Sending…';
+      try{
+        const r=await fetch(ef.action,{method:'POST',body:new FormData(ef)});
+        const d=await r.json().catch(()=>({}));
+        if(r.ok && d.success){
+          ef.querySelectorAll('.frow,.fld,button').forEach(el=>el.style.display='none');
+          if(status){status.textContent="Thanks — your request was sent. We'll get back to you within a day or two.";status.style.fontSize='1.05rem';status.style.color='var(--ink)';}
+        } else { throw new Error((d&&d.message)||'Submit failed'); }
+      }catch(err){
+        btn.disabled=false; btn.innerHTML=orig;
+        if(status){status.textContent='Sorry — something went wrong. Please call us or try again.';}
+      }
+    });
+  }
 </script>
 </body>
 </html>
