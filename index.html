@@ -6,7 +6,7 @@
 <title>Access Tech — Forestry Mulching & Fuel Reduction | North Idaho & Eastern WA</title>
 
 <!-- Favicon -->
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/images/logo-icon.png">
 
 <!-- SEO -->
 <meta name="description" content="Professional forestry mulching, fuel reduction, and land improvement across North Idaho and Eastern Washington. Reduce wildfire risk and reclaim usable, maintainable land. Free on-site estimates.">
@@ -45,7 +45,7 @@
     --forest-600:#2f5a3a; --moss-500:#688a5c; --moss-300:#a9c19c;
     --bone:#f5f1e6; --bone-200:#ece5d4; --kraft:#d8c8a4;
     --ink:#1b1a14; --ink-soft:#48463d; --bark:#4a3a28;
-    --ember:#d2561e; --ember-dark:#b1430f; --ember-soft:#e8a878;
+    --ember:#2f8f4e; --ember-dark:#236e3b; --ember-soft:#9bd9ad; /* recolored green (was orange) to match the Access Tech brand */
     --line:rgba(0,0,0,.10); --line-light:rgba(255,255,255,.12);
     --shadow:0 22px 55px -26px rgba(0,0,0,.5);
     --shadow-sm:0 12px 32px -22px rgba(0,0,0,.45);
@@ -153,6 +153,8 @@
   .brand .mark{width:40px;height:40px;flex:none}
   .brand .bname,.v2-brand .bname{font-family:var(--font-display);font-optical-sizing:auto;font-weight:700;font-size:1.32rem;line-height:1;letter-spacing:-.015em;display:block}
   .brand .bsub,.v2-brand .bsub{display:block;font-family:var(--font-sans);font-size:.58rem;letter-spacing:.28em;color:var(--moss-300);text-transform:uppercase;margin-top:3px;font-weight:600;line-height:1}
+  .brand-logo{height:40px;width:auto;display:block}
+  footer .brand-logo{height:38px}
   nav.menu{display:flex;align-items:center;gap:2rem}
   nav.menu a{font-family:var(--font-sans);font-size:.96rem;font-weight:500;color:#dfe7d8;position:relative;padding:.2rem 0}
   nav.menu a::after{content:"";position:absolute;left:0;bottom:-3px;height:2px;width:0;background:var(--ember);transition:width .2s ease}
@@ -165,7 +167,7 @@
   /* ===================== HERO ===================== */
   .hero{min-height:92vh;display:flex;align-items:flex-end;color:#fff;position:relative;background:var(--pine-900);overflow:hidden}
   .hero-bg{position:absolute;inset:0;z-index:0}
-  .hero-bg .ph{position:absolute;inset:0;height:100%;border:none;background:url("https://loremflickr.com/1600/900/wildfire?lock=70") center/cover no-repeat,#1c2a22;z-index:0}
+  .hero-bg .ph{position:absolute;inset:0;height:100%;border:none;background:url("/images/mulcher-cleared-area.jpg") center/cover no-repeat,#1c2a22;z-index:0}
   /* looping background video sits above the placeholder; if it fails to load the .ph shows through */
   .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
   /* keep the gradient backdrop but drop the placeholder label/icon sitting behind the hero copy */
@@ -217,7 +219,7 @@
   .cred .k{font-family:var(--font-sans);text-transform:uppercase;letter-spacing:.14em;font-size:.66rem;color:var(--ember);font-weight:700}
   .cred .v{font-family:var(--font-sans);font-weight:600;font-size:1.02rem;color:var(--ink);margin-top:.3rem;line-height:1.25}
   .about-visual{position:relative;margin-bottom:24px}
-  .about-visual .ph{aspect-ratio:4/5;border-radius:var(--radius-lg);background:linear-gradient(180deg,rgba(13,28,20,.28),rgba(13,28,20,.58)),url("https://loremflickr.com/800/1000/pine,forest?lock=65") center/cover no-repeat,#16291f}
+  .about-visual .ph{aspect-ratio:4/5;border-radius:var(--radius-lg);background:linear-gradient(180deg,rgba(13,28,20,.28),rgba(13,28,20,.58)),url("/images/mulcher-at-work.jpg") center/cover no-repeat,#16291f}
   .about-badge{position:absolute;bottom:-24px;left:-20px;background:var(--ember);color:#fff;padding:1.15rem 1.4rem;border-radius:var(--radius);box-shadow:var(--shadow)}
   .about-badge .n{font-family:var(--font-display);font-optical-sizing:auto;font-weight:600;font-size:1.7rem;line-height:1}
   .about-badge .t{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:600;margin-top:.3rem}
@@ -229,15 +231,15 @@
     display:flex;flex-direction:column;transition:transform .2s ease,border-color .2s ease,background .2s ease;position:relative;overflow:hidden;
   }
   .svc::before{content:"";position:absolute;left:0;top:0;width:3px;height:0;background:var(--ember);transition:height .25s ease}
-  .svc:hover{transform:translateY(-5px);background:var(--pine-700);border-color:rgba(232,168,120,.4)}
+  .svc:hover{transform:translateY(-5px);background:var(--pine-700);border-color:rgba(155,217,173,.4)}
   .svc:hover::before{height:100%}
-  .svc-ic{width:54px;height:54px;border-radius:var(--radius);background:rgba(210,86,30,.14);display:flex;align-items:center;justify-content:center;margin-bottom:var(--s3)}
+  .svc-ic{width:54px;height:54px;border-radius:var(--radius);background:rgba(47,143,78,.14);display:flex;align-items:center;justify-content:center;margin-bottom:var(--s3)}
   .svc-ic svg{width:26px;height:26px;color:var(--ember-soft);stroke-width:1.6}
   .svc h3{font-size:1.25rem;color:#fff;margin-bottom:.5rem}
   .svc p{font-size:.96rem;color:var(--moss-300);line-height:1.6}
 
   /* ===================== BEFORE & AFTER ===================== */
-  .ba-note{display:inline-flex;align-items:center;gap:.5rem;background:rgba(210,86,30,.1);border:1px solid rgba(210,86,30,.25);color:var(--ember);padding:.55rem 1rem;border-radius:2rem;font-size:.8rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-top:var(--s3)}
+  .ba-note{display:inline-flex;align-items:center;gap:.5rem;background:rgba(47,143,78,.1);border:1px solid rgba(47,143,78,.25);color:var(--ember);padding:.55rem 1rem;border-radius:2rem;font-size:.8rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-top:var(--s3)}
   .ba-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s4)}
   .ba-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm)}
   .ba-pair{display:grid;grid-template-columns:1fr 1fr;gap:3px;background:#fff}
@@ -269,9 +271,9 @@
   .area-map{position:relative;aspect-ratio:4/3;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--line-light);background:var(--pine-950)}
   .area-map .ph{height:100%;background:linear-gradient(180deg,rgba(13,28,20,.32),rgba(13,28,20,.62)),url("https://loremflickr.com/1000/750/pine,forest?lock=65") center/cover no-repeat,#16291f;border-style:solid;border-color:var(--line-light)}
   .pin{position:absolute;display:flex;flex-direction:column;align-items:center;z-index:3;color:#fff}
-  .pin .dot{width:14px;height:14px;border-radius:50%;background:var(--ember);box-shadow:0 0 0 6px rgba(210,86,30,.25);animation:pulse 2.4s infinite}
+  .pin .dot{width:14px;height:14px;border-radius:50%;background:var(--ember);box-shadow:0 0 0 6px rgba(47,143,78,.25);animation:pulse 2.4s infinite}
   .pin .lbl{font-family:var(--font-sans);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;margin-top:.45rem;background:rgba(0,0,0,.5);padding:.22rem .55rem;border-radius:2px}
-  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(210,86,30,.5)}70%{box-shadow:0 0 0 14px rgba(210,86,30,0)}100%{box-shadow:0 0 0 0 rgba(210,86,30,0)}}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(47,143,78,.5)}70%{box-shadow:0 0 0 14px rgba(47,143,78,0)}100%{box-shadow:0 0 0 0 rgba(47,143,78,0)}}
 
   /* ===================== ESTIMATE FORM ===================== */
   .est-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:var(--s6);align-items:start}
@@ -294,7 +296,7 @@
     padding:.85rem .95rem;border:1px solid #cfc6b0;border-radius:var(--radius);background:var(--bone);
     transition:border-color .15s ease,box-shadow .15s ease,background .15s ease;
   }
-  input:focus,textarea:focus,select:focus{outline:none;border-color:var(--ember);box-shadow:0 0 0 3px rgba(210,86,30,.14);background:#fff}
+  input:focus,textarea:focus,select:focus{outline:none;border-color:var(--ember);box-shadow:0 0 0 3px rgba(47,143,78,.14);background:#fff}
   textarea{resize:vertical;min-height:120px}
   .file-drop{border:1.5px dashed #cfc6b0;border-radius:var(--radius);padding:1.4rem;text-align:center;background:var(--bone);color:var(--ink-soft);font-size:.92rem;display:flex;flex-direction:column;align-items:center;gap:.55rem;cursor:pointer;transition:border-color .15s ease}
   .file-drop:hover{border-color:var(--ember)}
@@ -522,14 +524,7 @@
 <!-- ============ NAV ============ -->
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="#top">
-      <svg class="mark" viewBox="0 0 48 48" fill="none">
-        <rect width="48" height="48" rx="7" fill="#d2561e"/>
-        <path d="M24 9 14 26h6l-5 9h18l-5-9h6L24 9z" fill="#0d1c14"/>
-        <rect x="22.5" y="33" width="3" height="6" fill="#0d1c14"/>
-      </svg>
-      <span><span class="bname">Access&nbsp;Tech</span><span class="bsub">Forestry &amp; Land</span></span>
-    </a>
+    <a class="brand" href="#top"><img class="brand-logo" src="/images/logo-white.png" alt="Access Tech — Land Management" width="170" height="65"></a>
     <nav class="menu" id="menu">
       <a href="#about">About</a>
       <a href="#services">Services</a>
@@ -551,7 +546,7 @@
       <div class="ph-sub">Drop in a short looping clip — a mulcher working a lot, or slow drone footage over cleared land.</div>
     </div>
     <!-- Hero background. The photo poster fills the space now; to go animated later, add a <source src="/hero.mp4" type="video/mp4"> inside this <video>. -->
-    <video class="hero-video" autoplay muted loop playsinline poster="https://loremflickr.com/1600/900/wildfire?lock=70"></video>
+    <video class="hero-video" autoplay muted loop playsinline poster="/images/mulcher-cleared-area.jpg"></video>
   </div>
   <div class="wrap">
     <div class="hero-inner">
@@ -831,14 +826,7 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a class="brand" href="#top">
-          <svg class="mark" viewBox="0 0 48 48" fill="none">
-            <rect width="48" height="48" rx="7" fill="#d2561e"/>
-            <path d="M24 9 14 26h6l-5 9h18l-5-9h6L24 9z" fill="#0d1c14"/>
-            <rect x="22.5" y="33" width="3" height="6" fill="#0d1c14"/>
-          </svg>
-          <span><span class="bname" style="color:#fff">Access&nbsp;Tech</span><span class="bsub">Forestry &amp; Land</span></span>
-        </a>
+        <a class="brand" href="#top"><img class="brand-logo" src="/images/logo-white.png" alt="Access Tech — Land Management" width="170" height="65"></a>
         <p>Forestry mulching, fuel reduction, and land improvement throughout North Idaho and Eastern Washington. Reclaim, restore, and protect your property.</p>
       </div>
       <div>
@@ -1113,8 +1101,8 @@
 
 <!-- ============ LAYOUT TOGGLE (bottom) ============ -->
 <div class="vtoggle" role="group" aria-label="Choose a layout option">
-  <button type="button" data-layout="1">Option 1<small>Orange</small></button>
-  <button type="button" data-layout="2">Option 2<small>Green</small></button>
+  <button type="button" data-layout="1">Option 1<small>Full</small></button>
+  <button type="button" data-layout="2">Option 2<small>Condensed</small></button>
 </div>
 
 <script>
