@@ -176,6 +176,8 @@
   nav.menu a:hover{color:#fff}
   nav.menu a:hover::after{width:100%}
   .nav-cta{margin-left:.6rem}
+  nav.menu a.nav-cta{color:#fff}
+  .nav-cta::after{display:none}
   .burger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:8px}
   .burger span{width:24px;height:2px;background:#fff;display:block;transition:.25s}
 
@@ -453,23 +455,6 @@
   .v2-foot-links a:hover{color:#fff}
   .v2-foot-base{border-top:1px solid rgba(255,255,255,.12);margin-top:var(--s4);padding-top:var(--s3);font-size:.8rem;color:#84a888;text-align:center}
 
-  /* ===================== VERSION TOGGLE (bottom) ===================== */
-  .vtoggle{display:none;
-    position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:200;
-    display:flex;gap:4px;background:rgba(13,28,20,.92);backdrop-filter:blur(10px);
-    border:1px solid rgba(255,255,255,.16);padding:5px;border-radius:999px;
-    box-shadow:0 16px 40px -16px rgba(0,0,0,.7);
-  }
-  .vtoggle button{
-    font-family:var(--font-sans);font-weight:700;font-size:.8rem;letter-spacing:.02em;
-    color:#cdd9c8;background:none;border:none;cursor:pointer;padding:.5rem 1.1rem;border-radius:999px;
-    display:flex;flex-direction:column;align-items:center;line-height:1.15;transition:background .2s,color .2s;
-  }
-  .vtoggle button small{font-size:.58rem;opacity:.75;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-top:1px}
-  .vtoggle button:hover{color:#fff}
-  .vtoggle button.active{color:#fff}
-  .vtoggle button[data-layout="1"].active{background:var(--ember)}
-  .vtoggle button[data-layout="2"].active{background:var(--leaf)}
 
   /* ===================== RESPONSIVE ===================== */
   @media(max-width:900px){
@@ -520,7 +505,7 @@
     .v2-svc-grid{grid-template-columns:1fr}
   }
   /* a11y: visible keyboard focus + skip link */
-  a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,.btn:focus-visible,.vtoggle button:focus-visible{outline:2px solid var(--ember-dark);outline-offset:2px}
+  a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,.btn:focus-visible{outline:2px solid var(--ember-dark);outline-offset:2px}
   .skip-link{position:absolute;left:-999px;top:0;z-index:300;background:var(--ember-dark);color:#fff;padding:.65rem 1rem;border-radius:0 0 6px 0;font-family:var(--font-sans);font-weight:600}
   .skip-link:focus{left:0}
 </style>
@@ -1129,12 +1114,6 @@
 </div><!-- /#layout-two -->
 
 
-<!-- ============ LAYOUT TOGGLE (bottom) ============ -->
-<div class="vtoggle" role="group" aria-label="Choose a layout option">
-  <button type="button" data-layout="1">Option 1<small>Full</small></button>
-  <button type="button" data-layout="2">Option 2<small>Condensed</small></button>
-</div>
-
 <script>
   /* ---- Mobile nav (Option 1): full-screen overlay ---- */
   const burger=document.getElementById('burger'),menu=document.getElementById('menu');
@@ -1156,21 +1135,6 @@
     document.querySelectorAll(scope+' .reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4*0.08)+'s';io.observe(el);});
   });
 
-  /* ---- Layout toggle (Option 1 / Option 2) ---- */
-  const KEY='accesstech-layout';
-  const tBtns=document.querySelectorAll('.vtoggle button');
-  function setLayout(v,save){
-    v=(v==='2')?'2':'1';
-    document.body.classList.toggle('show-v2',v==='2');
-    tBtns.forEach(b=>b.classList.toggle('active',b.dataset.layout===v));
-    closeNav();
-    // (v2 reveals are left to the IntersectionObserver so they animate on scroll
-    //  instead of appearing pre-revealed)
-    if(save){try{localStorage.setItem(KEY,v);}catch(e){}}
-  }
-  let saved='1'; /* toggle hidden — always show the full layout */
-  setLayout(saved,false);
-  tBtns.forEach(b=>b.addEventListener('click',()=>{setLayout(b.dataset.layout,true);window.scrollTo({top:0,behavior:'smooth'});}));
 
   /* ---- Estimate form → Web3Forms (AJAX, inline success/error) ---- */
   const ef=document.getElementById('estimate-form');
