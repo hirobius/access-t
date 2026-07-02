@@ -28,7 +28,7 @@ Status key: ☐ todo · ◐ in progress · ✓ done · ⏸ deferred (on purpose)
 
 ## 1. Launch (Phase 0 — the critical path)
 - ☐ Invoice + collect the $1,500 build fee from Phil (Owner: Adrian)
-- ✓ Pricing locked: case-by-case edits, no subscription (Stripe optional for invoicing)
+- ✓ Access Tech deal (one-off): $1,500 build + case-by-case edits — **not the standard model**
 - ☐ Point `accesstechnw.com` — currently on Squarespace; needs DNS access (Owner: Adrian/Phil)
 - ☐ Turn OFF Vercel Deployment Protection (Owner: Adrian — dashboard)
 - ☐ Remove `noindex` meta + push (Owner: agent, on Adrian's go)
