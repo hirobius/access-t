@@ -30,7 +30,7 @@ read off the actual `index.html` (~1,194 lines, single self-contained file).
 | **Assets** | Self-hosted in `/images` |
 | **Hosting** | Vercel (managed static; portable to Netlify / Cloudflare Pages) |
 | **Form** | Web3Forms (host-agnostic, AJAX) → emails adrian@hirobius.com |
-| **Business model** | $250 setup + $100/mo care plan; edits are **request-based + AI-assisted** (no client CMS) |
+| **Business model** | $1,500 upfront build; edits billed **case-by-case, request-based + AI-assisted** (no client CMS, no subscription) |
 
 **Why custom static + AI editing (not Duda/Webflow/headless CMS):** margins and control.
 A self-contained zero-dependency file is trivially hostable, portable, and cheap to run; the
@@ -364,7 +364,7 @@ before launch; "Defer" = add when templatizing (Phase 1).
   pointing, noindex removal, Vercel protection off, OG/JSON-LD URL verification, promote to `main`).
 
 **Backend / platform (deferred per backlog, noted for completeness):**
-- Stripe ($250 setup + $100/mo) not wired.
+- Billing: $1,500 build invoice not yet collected; edits billed case-by-case.
 - Analytics / call tracking — none (Phase 1).
 - Privacy policy — required on every client site (item 11), not present.
 - CMS deliberately **not** built (request-based + AI is the chosen model).

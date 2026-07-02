@@ -117,7 +117,7 @@ Do these in order, only after QA passes and the **client has approved** the prev
 5. **Final live check.** Visit the real web address: confirm the padlock is there, images load,
    and submit **one more** test through the contact form to make sure leads arrive on the live site.
 
-After launch: once the client has paid the **$250 setup**, Adrian starts the **$100/mo care plan**
+After launch: confirm the client has paid the **$1,500 build fee**; edits after handoff are **billed case-by-case**
 in Stripe. (Don't start billing yourself — see escalation.)
 
 ---
@@ -130,7 +130,7 @@ Loop Adrian in (don't guess) when:
 - The contact form test email does **not** arrive after a couple of tries.
 - The client wants something the template doesn't do (extra pages, online booking, e-commerce, a
   login, a system for them to edit the site themselves).
-- Anything touching **money**: starting the Stripe care plan, the $250 setup invoice, refunds.
+- Anything touching **money**: invoicing the $1,500 build fee, pricing an edit request, refunds.
 - You're unsure whether the site is truly ready to go public.
 - Any account access, passwords, or the Web3Forms key need to be stored or shared.
 
@@ -150,8 +150,8 @@ Loop Adrian in (don't guess) when:
 - **Web3Forms key** — a free, unique code that connects the site's contact form to an email inbox.
   Every site gets its **own** key pointed at **that client's** lead email. Never reuse another
   client's key.
-- **Care plan** — our ongoing service: $100/month (via Stripe) covering edits and upkeep after the
-  $250 one-time setup. Edits are request-based and AI-assisted — clients don't log in to change the
+- **Edits (case-by-case)** — after the one-time $1,500 build, changes are requested by the client and
+  billed per request. Edits are request-based and AI-assisted — clients don't log in to change the
   site themselves; they ask us.
 - **Preview vs. production** — *preview* is the private draft we review; *production* is the public,
   live site on the real domain. We only promote to production at launch.

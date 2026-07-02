@@ -27,8 +27,8 @@ Status key: ☐ todo · ◐ in progress · ✓ done · ⏸ deferred (on purpose)
 - ☐ Privacy policy copy once-over before launch (template text is generic)
 
 ## 1. Launch (Phase 0 — the critical path)
-- ☐ Collect $250 setup from Phil (Owner: Adrian)
-- ☐ Stripe: $100/mo care-plan subscription (Owner: Adrian)
+- ☐ Invoice + collect the $1,500 build fee from Phil (Owner: Adrian)
+- ✓ Pricing locked: case-by-case edits, no subscription (Stripe optional for invoicing)
 - ☐ Point `accesstechnw.com` — currently on Squarespace; needs DNS access (Owner: Adrian/Phil)
 - ☐ Turn OFF Vercel Deployment Protection (Owner: Adrian — dashboard)
 - ☐ Remove `noindex` meta + push (Owner: agent, on Adrian's go)
@@ -47,7 +47,7 @@ Status key: ☐ todo · ◐ in progress · ✓ done · ⏸ deferred (on purpose)
 - ☐ Lazy-load below-the-fold background images (minor)
 
 ## 4. Ops / business (Phase 0 → 1, Owner: Adrian)
-- ✓ Proposal template + filled Access Tech proposal ($250 + $100/mo)
+- ✓ Proposal template + filled Access Tech proposal (update to $1,500 + case-by-case for future sends)
 - ✓ Client tracker (CSV), onboarding checklist, preview/spec-site workflow, security baseline
 - ☐ MFA on all accounts (registrar, host, email, Stripe, vault)
 - ☐ Password-manager vaults per client (1Password/Bitwarden)
@@ -78,5 +78,5 @@ Status key: ☐ todo · ◐ in progress · ✓ done · ⏸ deferred (on purpose)
 ---
 
 ### Critical path (in order)
-1. $250 + Stripe → 2. Domain/DNS → 3. Launch flips (protection off, noindex out) →
+1. Collect $1,500 → 2. Domain/DNS → 3. Launch flips (protection off, noindex out) →
 4. Post-launch verify + Search Console → 5. Phil's before/afters → 6. Phase 1 templatization.

@@ -34,7 +34,7 @@ Cabinet Grotesk + Satoshi (Option 2).
 - [ ] Turn off Vercel Deployment Protection (or host equivalent)
 - [ ] Verify `og:image` / structured-data URLs resolve on the live domain
 - [ ] Promote to `main` (production)
-- [ ] Start Stripe ($100/mo care plan) once the $250 setup is paid
+- [ ] Collect the $1,500 build fee (edits billed case-by-case; no subscription)
 
 ## Docs
 - `ARCHITECTURE.md` — repo architecture review + target direction

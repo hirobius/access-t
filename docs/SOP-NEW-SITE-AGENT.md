@@ -304,7 +304,7 @@ Return a concise report containing:
   test email screenshot/landing confirmation), noindex removed, protection off, on `main`.
 - The Web3Forms access key used (note it routes to the client's lead email) for the password vault.
 - Any open items requiring a human (e.g. awaiting real before/after photos, domain transfer in the
-  client's name, billing: $250 setup + $100/mo Stripe care plan not yet started).
+  client's name, billing: $1,500 upfront build fee; edits billed case-by-case — invoice status).
 - Anything you could not verify and why.
 
 Do not start Stripe billing or transfer domain ownership yourself — flag these for Adrian.

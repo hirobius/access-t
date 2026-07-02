@@ -125,8 +125,8 @@ slice and `CLIENT-BUILD-ANATOMY.md` is the deep teardown.
 ## J. Billing / payments
 | Item | Status | Phase | Owner | Notes |
 |---|---|---|---|---|
-| Stripe subscription ($100/mo) | ☐ | P0 | H | |
-| Setup invoice ($250 upfront) | ☐ | P0 | H | |
+| Edits billed case-by-case (no subscription) | ✓ | P0 | H | pricing locked: $1500 build + per-request edits |
+| Build invoice ($1,500 upfront) | ☐ | P0 | H | |
 | Dunning / receipts | ☐ | P1 | H | |
 | Customer portal | ⏸ | P2 | H | optional |
 
@@ -176,7 +176,7 @@ slice and `CLIENT-BUILD-ANATOMY.md` is the deep teardown.
 ---
 
 ## Next 5 (critical path — Access Tech to live + billing)
-1. **Confirm Phil's $250 paid** → start **Stripe** ($100/mo). *(H)*
+1. **Invoice + collect the $1,500 build fee.** Edits are billed case-by-case (no subscription). *(H)*
 2. **Domain**: point `accesstechnw.com` (DNS). *(H/X)*
 3. **Launch flips**: remove `noindex`, turn off Deployment Protection, promote to `main`. *(A + H)*
 4. **Real before/after photos** from Phil → swap gallery off placeholders. *(X → A)*
