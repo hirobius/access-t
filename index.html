@@ -176,7 +176,7 @@
   nav.menu a:hover{color:#fff}
   nav.menu a:hover::after{width:100%}
   .nav-cta{margin-left:.6rem}
-  nav.menu a.nav-cta{color:#fff}
+  nav.menu a.nav-cta{color:#fff;padding:.85rem 1.35rem;border-radius:var(--radius);font-size:.88rem}
   .nav-cta::after{display:none}
   .burger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:8px}
   .burger span{width:24px;height:2px;background:#fff;display:block;transition:.25s}
@@ -236,7 +236,7 @@
   .cred .k{font-family:var(--font-sans);text-transform:uppercase;letter-spacing:.14em;font-size:.66rem;color:var(--ember-dark);font-weight:700}
   .cred .v{font-family:var(--font-sans);font-weight:600;font-size:1.02rem;color:var(--ink);margin-top:.3rem;line-height:1.25}
   .about-visual{position:relative;margin-bottom:24px}
-  .about-visual .ph{aspect-ratio:4/5;border-radius:var(--radius-lg);background:linear-gradient(180deg,rgba(13,28,20,.28),rgba(13,28,20,.58)),url("/images/mulcher-at-work.webp") center/cover no-repeat,#16291f}
+  .about-photo{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius-lg);box-shadow:var(--shadow-sm)}
   .about-badge{position:absolute;bottom:-24px;left:-20px;background:var(--ember);color:#fff;padding:1.15rem 1.4rem;border-radius:var(--radius);box-shadow:var(--shadow)}
   .about-badge .n{font-family:var(--font-display);font-optical-sizing:auto;font-weight:600;font-size:1.7rem;line-height:1}
   .about-badge .t{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:600;margin-top:.3rem}
@@ -482,6 +482,7 @@
     }
     nav.menu.open{transform:none}
     nav.menu .nav-cta{margin-left:0;margin-top:.5rem}
+    nav.menu a.nav-cta{font-size:1rem;padding:1rem 1.6rem}
     nav.menu a{font-size:1.3rem}
     .burger{display:flex;z-index:70}
     .burger.open span{background:#fff}
@@ -540,7 +541,7 @@
       <a href="#gallery">Before &amp; After</a>
       <a href="#why">Why Us</a>
       <a href="#area">Service Area</a>
-      <a class="btn btn-primary nav-cta" href="#estimate">Free Estimate</a>
+      <a class="btn btn-primary nav-cta" href="#estimate">Request a Free Estimate</a>
     </nav>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
@@ -598,11 +599,7 @@
         </div>
       </div>
       <div class="about-visual reveal">
-        <div class="ph">
-          <i data-lucide="user"></i>
-          <div class="ph-tag">Owner / Equipment Photo</div>
-          <div class="ph-sub">A portrait of you on-site or with the machine builds trust.</div>
-        </div>
+        <img class="about-photo" src="/images/mulcher-at-work.webp" alt="Access Tech skid steer with forestry mulcher head on a freshly cleared lot" width="1000" height="1333" loading="lazy">
         <div class="about-badge">
           <div class="n">Practical</div>
           <div class="t">Results that last</div>
@@ -802,7 +799,7 @@
         </div>
         <div class="fld"><label>Description of Project <span class="req">*</span></label><textarea name="message" placeholder="Tell us what you're hoping to do — fuel reduction, cleanup, trails, access, etc." required></textarea></div>
         <button class="btn btn-primary" type="submit">
-          Request My Free Estimate
+          Request a Free Estimate
           <i data-lucide="arrow-right"></i>
         </button>
         <p class="form-foot" id="estimate-status">We'll get back to you quickly — usually within a day or two.</p>
@@ -1065,7 +1062,7 @@
           </div>
           <div class="fld"><label>Description of Project <span class="req">*</span></label><textarea placeholder="Fuel reduction, cleanup, trails, access, etc." required></textarea></div>
           <button class="btn v2-btn" type="submit">
-            Request My Free Estimate
+            Request a Free Estimate
             <i data-lucide="arrow-right"></i>
           </button>
           <p class="form-foot">We'll get back to you quickly — usually within a day or two.</p>
