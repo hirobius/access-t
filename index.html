@@ -330,7 +330,9 @@
   .file-drop svg{width:26px;height:26px;color:var(--moss-500)}
   .file-drop small{color:#8a8473}
   form.est .btn{width:100%;justify-content:center;margin-top:var(--s2);padding:1.1rem}
-  .form-foot{font-size:.84rem;color:#8a8473;text-align:center;margin-top:var(--s2)}
+  .form-consent{font-size:.78rem;line-height:1.5;color:#8a8473;text-align:center;margin-top:var(--s2)}
+  .form-consent a{color:var(--ember-dark);text-decoration:underline}
+  .form-foot{font-size:.84rem;color:#8a8473;text-align:center;margin-top:.6rem}
 
   /* ===================== FINAL CTA ===================== */
   .final{background:var(--ember);color:#fff;text-align:center;padding-block:var(--s7)}
@@ -870,6 +872,7 @@
           Request a Free Assessment
           <i data-lucide="arrow-right"></i>
         </button>
+        <p class="form-consent">By submitting, you agree that Access Tech may contact you about your request by phone, text, or email. See our <a href="/privacy.html">Privacy Policy</a>.</p>
         <p class="form-foot" id="estimate-status">We'll get back to you quickly, usually within a day or two.</p>
       </form>
     </div>
@@ -1199,7 +1202,7 @@
         const r=await fetch(ef.action,{method:'POST',body:new FormData(ef)});
         const d=await r.json().catch(()=>({}));
         if(r.ok && d.success){
-          ef.querySelectorAll('.frow,.fld,button').forEach(el=>el.style.display='none');
+          ef.querySelectorAll('.frow,.fld,button,.form-consent').forEach(el=>el.style.display='none');
           if(status){status.textContent="Thanks! Your request was sent. We'll get back to you within a day or two.";status.style.fontSize='1.05rem';status.style.color='var(--ink)';}
         } else { throw new Error((d&&d.message)||'Submit failed'); }
       }catch(err){
