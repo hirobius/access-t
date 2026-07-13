@@ -1,0 +1,202 @@
+{
+  "$schema": "https://raw.githubusercontent.com/hirobius/site-engine/main/schema/client-config.schema.json",
+  "_meta": {
+    "client": "access-tech",
+    "extractedFrom": "index.html @ main (post fire-management repositioning, all real photos)",
+    "extractedAt": "2026-07-13",
+    "note": "Engine-ready content payload. Section order mirrors the live static build. Asset paths are repo-relative; all images are optimized WebP. Squarespace/DNS creds intentionally NOT stored here — see password vault."
+  },
+  "business": {
+    "name": "Access Tech",
+    "tagline": "Land Management",
+    "motto": "Reclaim. Restore. Protect.",
+    "positioning": "Fire management and land stewardship consulting with in-house implementation — advisors first, operators second.",
+    "owner": "Phil Dipofi",
+    "email": "Phil@accesstechnw.com",
+    "phones": [
+      { "label": "Idaho", "number": "208-500-8988" },
+      { "label": "Washington", "number": "509-789-0371" }
+    ],
+    "serviceArea": "North Idaho & Eastern Washington",
+    "domain": "accesstechnw.com",
+    "credentials": ["Forest Resource Management (degree)", "Fire Ecology & Management (degree)"]
+  },
+  "theme": {
+    "palette": {
+      "pine950": "#0d1c14", "pine900": "#13321f", "ember": "#2f8f4e", "emberDark": "#236e3b",
+      "emberSoft": "#9bd9ad", "bone": "#f5f1e6", "ink": "#1b1a14", "inkSoft": "#48463d"
+    },
+    "fonts": {
+      "display": "Bricolage Grotesque (self-hosted, latin subset)",
+      "sans": "Hanken Grotesk (self-hosted, latin subset)"
+    },
+    "icons": "lucide@0.460.0 (CDN pinned; self-host pending)"
+  },
+  "seo": {
+    "title": "Access Tech — Fire Management & Land Stewardship | North Idaho & Eastern WA",
+    "description": "Fire management and land stewardship consulting with in-house implementation, across North Idaho and Eastern Washington. Science-based wildfire risk assessments, treatment plans, and the equipment to carry them out. Free on-site assessments.",
+    "canonical": "https://accesstechnw.com/",
+    "ogImage": "/images/og-image.jpg",
+    "jsonLd": "LocalBusiness",
+    "prelaunchNoindex": true
+  },
+  "nav": ["About", "Process", "Services", "Before & After", "Why Us", "Service Area"],
+  "cta": { "label": "Request a Free Assessment", "href": "#estimate", "arrow": true },
+  "sections": [
+    {
+      "type": "hero",
+      "eyebrow": "Fire Management & Land Stewardship — North Idaho & Eastern Washington",
+      "headline": "Reclaim. Restore. Protect.",
+      "sub": "We help landowners understand their wildfire risk and manage their land for the long term — science-based assessments and treatment plans, implemented with our own equipment. Advisors first, operators second.",
+      "primaryCta": "Request a Free Assessment",
+      "secondaryCta": { "label": "See Our Process", "href": "#process" },
+      "background": "/images/hero-stewardship.webp",
+      "videoSlot": true
+    },
+    {
+      "type": "trustBand",
+      "items": [
+        { "icon": "graduation-cap", "label": "Degreed Forester" },
+        { "icon": "shield", "label": "Wildfire-Risk Focused" },
+        { "icon": "map-pin", "label": "Local to ID & WA" },
+        { "icon": "clipboard-check", "label": "Free On-Site Assessments" }
+      ]
+    },
+    {
+      "type": "about",
+      "eyebrow": "About Access Tech",
+      "lead": "Trusted advisors who happen to own the equipment.",
+      "body": [
+        "Access Tech provides fire management and land stewardship consulting — with in-house implementation — across North Idaho and Eastern Washington. We don't sell machine time. We help landowners assess wildfire risk, understand their property's condition, and manage their land for the long term.",
+        "Our work is guided by formal training in Forest Resource Management and Fire Ecology & Management, and ongoing professional work in the forestry industry. The goal is simple: give landowners effective, practical solutions that improve the health, usability, and safety of their property."
+      ],
+      "photo": { "src": "/images/about-equipment.webp", "alt": "Access Tech ASV RT-120 with Fecon forestry mulcher head in a thinned, healthy stand" },
+      "badge": { "big": "Practical", "small": "Results that last" }
+    },
+    {
+      "type": "process",
+      "eyebrow": "How We Work",
+      "headline": "Evaluate first. Prescribe second. Implement third.",
+      "sub": "Land stewardship is a process, not a one-time job. Every property starts with an assessment — the equipment comes later.",
+      "steps": [
+        { "n": "01", "title": "Assess", "body": "We walk your property and evaluate wildfire risk, fuels, forest health, and existing conditions." },
+        { "n": "02", "title": "Prescribe", "body": "You get practical, science-based treatment recommendations — grounded in forestry, not a sales pitch." },
+        { "n": "03", "title": "Prioritize", "body": "Projects are sequenced by wildfire risk, forest health, and your objectives and budget." },
+        { "n": "04", "title": "Implement", "body": "We carry out the treatments with our in-house equipment — or trusted partners for specialized work." },
+        { "n": "05", "title": "Maintain", "body": "We monitor results and recommend long-term maintenance cycles that keep your land protected." }
+      ]
+    },
+    {
+      "type": "services",
+      "eyebrow": "Implementation",
+      "headline": "Services",
+      "sub": "When a treatment plan calls for equipment, we do the work ourselves — the full range of forestry and land-improvement services, in-house or with trusted partners.",
+      "items": [
+        { "icon": "trees", "title": "Forestry Mulching", "body": "Grind brush, saplings, and overgrowth into nutrient-rich mulch in a single pass — no piles, no burning." },
+        { "icon": "flame", "title": "Fuel Reduction", "body": "Reduce the ladder fuels and dense vegetation that let wildfire climb and spread across your land." },
+        { "icon": "shield", "title": "Fire Mitigation", "body": "Create defensible space around homes and structures to give your property a fighting chance." },
+        { "icon": "broom", "title": "Property Cleanup", "body": "Clear years of overgrowth, deadfall, and debris to reclaim ground you can actually use." },
+        { "icon": "sprout", "title": "Understory Thinning", "body": "Selectively thin crowded understory to improve forest health and let your best trees thrive." },
+        { "icon": "footprints", "title": "Trail Creation", "body": "Open up walking, riding, and recreational trails that make your acreage enjoyable and accessible." },
+        { "icon": "route", "title": "Access Improvements", "body": "Build and widen access routes so you, your equipment, and emergency services can get where you need to go." },
+        { "icon": "axe", "title": "Small Tree Removal", "body": "Remove unwanted small trees and saplings without tearing up the ground you want to keep." },
+        { "icon": "mountain", "title": "Land Improvement", "body": "Turn neglected acreage into healthy, productive, maintainable land that works for how you live." }
+      ]
+    },
+    {
+      "type": "beforeAfterGallery",
+      "eyebrow": "The Proof",
+      "headline": "Before & After",
+      "sub": "See the difference for yourself. These transformations are the clearest picture of what we do.",
+      "pairs": [
+        {
+          "title": "Defensible Space — Rural Home",
+          "caption": "A solid wall of brush and ladder fuels opened into park-like defensible space around the home site.",
+          "before": { "src": "/images/p1-before.webp", "alt": "Before: impenetrable wall of brush and ladder fuels" },
+          "after": { "src": "/images/p1-after.webp", "alt": "After: open, park-like defensible space around the home" }
+        },
+        {
+          "title": "Understory Fuels Reduction",
+          "caption": "The same stand, one season apart — surface and ladder fuels removed, healthy trees left to thrive.",
+          "before": { "src": "/images/p2-before.webp", "alt": "Before: overgrown roadside stand with heavy understory fuels" },
+          "after": { "src": "/images/p2-after.webp", "alt": "After: the same stand opened to healthy, fire-resilient spacing" }
+        },
+        {
+          "title": "Brush Reclaim & Mulch-In-Place",
+          "caption": "Dense brush ground into mulch on site — nutrients returned to the soil, ground left clean and walkable.",
+          "before": { "src": "/images/p3-before.webp", "alt": "Before: dense dry brush and grass choking the understory" },
+          "after": { "src": "/images/p3-after.webp", "alt": "After: brush mulched in place, ground clean and walkable" }
+        }
+      ]
+    },
+    {
+      "type": "whyUs",
+      "eyebrow": "Why Access Tech",
+      "headline": "Built on knowledge, proven in the field",
+      "sub": "This isn't equipment for hire. It's risk reduction and property stewardship, guided by someone who understands the forest.",
+      "items": [
+        { "icon": "graduation-cap", "title": "A real forestry background", "body": "Degrees in Forest Resource Management and Fire Ecology & Management mean decisions are grounded in how forests actually work — not guesswork." },
+        { "icon": "shield", "title": "Focused on protection", "body": "The aim is improving your property and reducing wildfire risk — creating usable, maintainable space, not just stripping the land bare." },
+        { "icon": "map-pin", "title": "Local to the terrain", "body": "We know the ground, the fuel types, and the fire conditions specific to North Idaho and Eastern Washington." },
+        { "icon": "settings", "title": "Practical, lasting results", "body": "Effective solutions that improve the health, usability, and safety of your property — work you can actually maintain over time." }
+      ]
+    },
+    {
+      "type": "serviceArea",
+      "headline": "Service Area",
+      "sub": "Proudly serving rural homeowners, landowners, recreational property owners, timberland owners, and communities throughout North Idaho and Eastern Washington.",
+      "tags": ["North Idaho", "Eastern Washington", "Rural Homeowners", "Acreage & Timberland", "HOAs & Communities"],
+      "map": { "type": "google-embed", "query": "Coeur d'Alene, ID", "zoom": 7 }
+    },
+    {
+      "type": "leadForm",
+      "eyebrow": "Get Started",
+      "headline": "Start with a free assessment",
+      "sub": "Tell us about your property, its conditions, and your goals. We evaluate first, prescribe second, and implement third — this gives us what we need to begin.",
+      "provider": "web3forms",
+      "accessKey": "31719ab4-ebe8-484a-88bc-ed84acbc8b89",
+      "deliverTo": "adrian@hirobius.com",
+      "subject": "New property assessment request — Access Tech website",
+      "spam": "honeypot",
+      "fields": [
+        { "name": "name", "label": "Name", "type": "text", "required": true },
+        { "name": "phone", "label": "Phone", "type": "tel", "required": true },
+        { "name": "email", "label": "Email", "type": "email", "required": true },
+        { "name": "address", "label": "Property Location", "type": "text", "required": true, "placeholder": "Address or general area (city / county)" },
+        { "name": "acreage", "label": "Approximate Acreage", "type": "select", "options": ["Under 1 acre", "1–5 acres", "5–10 acres", "10–20 acres", "20+ acres", "Not sure"] },
+        { "name": "objectives", "label": "Primary Objectives", "type": "checkboxes", "options": ["Wildfire risk reduction", "Defensible space around structures", "Forest health / thinning", "Access, trails and clearing", "Long-term stewardship plan"] },
+        { "name": "timeline", "label": "Timeline", "type": "select", "options": ["As soon as possible", "This season", "Next 6–12 months", "Planning ahead"] },
+        { "name": "message", "label": "Property Conditions & Goals", "type": "textarea", "required": true }
+      ],
+      "submitLabel": "Request a Free Assessment",
+      "successNote": "We'll get back to you quickly — usually within a day or two."
+    },
+    {
+      "type": "finalCta",
+      "headline": "Reclaim, restore & protect your land",
+      "sub": "Know your wildfire risk and put a long-term plan behind your property. Start with a free, no-pressure assessment.",
+      "cta": "Request a Free Assessment"
+    },
+    {
+      "type": "footer",
+      "blurb": "Fire management and land stewardship consulting — with in-house implementation — throughout North Idaho and Eastern Washington. Reclaim, restore, protect.",
+      "legal": ["Privacy Policy (/privacy.html)"],
+      "copyright": "© 2026 Access Tech. All rights reserved."
+    }
+  ],
+  "assets": {
+    "logoWhite": "/images/logo-white.png",
+    "logoColor": "/images/logo-color.png",
+    "logoIcon": "/images/logo-icon.png",
+    "favicon": "/images/logo-icon.png",
+    "hero": "/images/hero-stewardship.webp",
+    "about": "/images/about-equipment.webp",
+    "gallery": ["/images/p1-before.webp", "/images/p1-after.webp", "/images/p2-before.webp", "/images/p2-after.webp", "/images/p3-before.webp", "/images/p3-after.webp"],
+    "ogImage": "/images/og-image.jpg",
+    "unplacedAvailable": ["QTAC fire pumper on Polaris Ranger (fire-response credibility shot)", "Eq1 equipment on gravel pad", "IMG_6295/6297 additional defensible-space shots", "before-after-promo.jpg (Phil's social graphic)"]
+  },
+  "pages": {
+    "privacy": "/privacy.html (dated July 2026, human sign-off pending)",
+    "notFound": "/404.html"
+  }
+}
