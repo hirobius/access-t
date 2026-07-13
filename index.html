@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Access Tech — Fire Management & Land Stewardship | North Idaho & Eastern WA</title>
+<title>Access Tech | Fire Management & Land Stewardship in North Idaho & Eastern WA</title>
 
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="/images/logo-icon.png">
@@ -15,7 +15,7 @@
 <meta name="robots" content="noindex,nofollow">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Access Tech — Fire Management & Land Stewardship | North Idaho & Eastern WA">
+<meta property="og:title" content="Access Tech | Fire Management & Land Stewardship in North Idaho & Eastern WA">
 <meta property="og:description" content="Fire management and land stewardship consulting with in-house implementation, across North Idaho and Eastern Washington. Science-based wildfire risk assessments, treatment plans, and the equipment to carry them out. Free on-site assessments.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://accesstechnw.com/">
@@ -25,7 +25,7 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Access Tech — Fire Management & Land Stewardship | North Idaho & Eastern WA">
+<meta name="twitter:title" content="Access Tech | Fire Management & Land Stewardship in North Idaho & Eastern WA">
 <meta name="twitter:description" content="Fire management and land stewardship consulting with in-house implementation, across North Idaho and Eastern Washington. Science-based wildfire risk assessments, treatment plans, and the equipment to carry them out. Free on-site assessments.">
 <meta name="twitter:image" content="https://accesstechnw.com/images/og-image.jpg">
 
@@ -35,7 +35,7 @@
   "@context":"https://schema.org",
   "@type":"LocalBusiness",
   "name":"Access Tech",
-  "description":"Fire management and land stewardship consulting with in-house implementation across North Idaho and Eastern Washington — wildfire risk assessments, science-based treatment plans, forestry mulching and fuel reduction.",
+  "description":"Fire management and land stewardship consulting with in-house implementation across North Idaho and Eastern Washington: wildfire risk assessments, science-based treatment plans, forestry mulching and fuel reduction.",
   "url":"https://accesstechnw.com",
   "logo":"https://accesstechnw.com/images/logo-color.png",
   "image":"https://accesstechnw.com/images/og-image.jpg",
@@ -308,6 +308,7 @@
   form.est{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:var(--s5);box-shadow:var(--shadow)}
   .fld{margin-bottom:var(--s3)}
   .frow{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3)}
+  input,select,textarea,button{font:inherit}
   label{display:block;font-family:var(--font-sans);text-transform:uppercase;letter-spacing:.09em;font-size:.72rem;font-weight:700;color:var(--bark);margin-bottom:.5rem}
   label .req{color:var(--ember-dark)}
   label .opt{color:#8a8473;font-weight:500;text-transform:none;letter-spacing:0}
@@ -522,9 +523,13 @@
   @media(max-width:1080px){.proc-grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:560px){.proc-grid{grid-template-columns:1fr}}
   .checks{display:flex;flex-wrap:wrap;gap:.5rem}
-  .chk{display:inline-flex;align-items:center;gap:.5rem;background:var(--bone);border:1px solid #cfc6b0;border-radius:999px;padding:.5rem .95rem;font-size:.9rem;color:var(--ink);cursor:pointer;font-weight:500}
-  .chk input{accent-color:var(--ember-dark);width:15px;height:15px;margin:0}
-  .chk:has(input:checked){border-color:var(--ember-dark);background:rgba(47,143,78,.08)}
+  .chk{display:inline-flex;align-items:center;gap:.55rem;background:#fff;border:1px solid #d8d0bc;border-radius:999px;padding:.55rem 1rem .55rem .7rem;cursor:pointer;transition:border-color .15s ease,background .15s ease;
+    font-family:var(--font-sans);font-size:.92rem;font-weight:500;color:var(--ink);text-transform:none;letter-spacing:0;margin-bottom:0}
+  .chk:hover{border-color:var(--ember-dark)}
+  .chk input{appearance:none;-webkit-appearance:none;flex:none;width:18px;height:18px;margin:0;border:1.5px solid #b9ae94;border-radius:5px;background:#fff;display:grid;place-items:center;transition:background .15s ease,border-color .15s ease}
+  .chk input:checked{background:var(--ember-dark);border-color:var(--ember-dark)}
+  .chk input:checked::after{content:"";width:9px;height:5px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg) translateY(-1px)}
+  .chk:has(input:checked){border-color:var(--ember-dark);background:rgba(47,143,78,.07)}
 </style>
 </head>
 <body>
@@ -549,7 +554,7 @@
 <!-- ============ NAV ============ -->
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="#top"><img class="brand-logo" src="/images/logo-white.png" alt="Access Tech — Land Management" width="170" height="65"></a>
+    <a class="brand" href="#top"><img class="brand-logo" src="/images/logo-white.png" alt="Access Tech Land Management" width="170" height="65"></a>
     <nav class="menu" id="menu">
       <a href="#about">About</a>
       <a href="#process">Process</a>
@@ -569,16 +574,16 @@
     <div class="ph">
       <i data-lucide="image"></i>
       <div class="ph-tag">Hero Video / Photo</div>
-      <div class="ph-sub">Drop in a short looping clip — a mulcher working a lot, or slow drone footage over cleared land.</div>
+      <div class="ph-sub">Drop in a short looping clip: a mulcher working a lot, or slow drone footage over cleared land.</div>
     </div>
     <!-- Hero background. The photo poster fills the space now; to go animated later, add a <source src="/hero.mp4" type="video/mp4"> inside this <video>. -->
     <video class="hero-video" autoplay muted loop playsinline poster="/images/hero-stewardship.webp"></video>
   </div>
   <div class="wrap">
     <div class="hero-inner">
-      <span class="eyebrow light">Fire Management &amp; Land Stewardship — North Idaho &amp; Eastern Washington</span>
+      <span class="eyebrow light">Fire Management &amp; Land Stewardship in North Idaho &amp; Eastern Washington</span>
       <h1>Reclaim. Restore. <span class="accent">Protect.</span></h1>
-      <p class="lead sub">We help landowners understand their wildfire risk and manage their land for the long term — science-based assessments and treatment plans, implemented with our own equipment. Advisors first, operators second.</p>
+      <p class="lead sub">We help landowners understand their wildfire risk and manage their land for the long term, with science-based assessments and treatment plans implemented using our own equipment. Advisors first, operators second.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#estimate">
           Request a Free Assessment
@@ -607,7 +612,7 @@
       <div class="about-copy reveal">
         <span class="eyebrow">About Access Tech</span>
         <p class="lead">Trusted advisors who happen to own the equipment.</p>
-        <p class="body">Access Tech provides fire management and land stewardship consulting — with in-house implementation — across North Idaho and Eastern Washington. We don't sell machine time. We help landowners assess wildfire risk, understand their property's condition, and manage their land for the long term.</p>
+        <p class="body">Access Tech provides fire management and land stewardship consulting, with in-house implementation, across North Idaho and Eastern Washington. We don't sell machine time. We help landowners assess wildfire risk, understand their property's condition, and manage their land for the long term.</p>
         <p class="body">Our work is guided by formal training in Forest Resource Management and Fire Ecology &amp; Management, and ongoing professional work in the forestry industry. The goal is simple: give landowners effective, practical solutions that improve the health, usability, and safety of their property.</p>
         <div class="creds">
           <div class="cred"><div class="k">Degree</div><div class="v">Forest Resource Management</div></div>
@@ -632,13 +637,13 @@
     <div class="sec-head center reveal">
       <span class="eyebrow">How We Work</span>
       <h2>Evaluate first. Prescribe second. Implement third.</h2>
-      <p>Land stewardship is a process, not a one-time job. Every property starts with an assessment — the equipment comes later.</p>
+      <p>Land stewardship is a process, not a one-time job. Every property starts with an assessment. The equipment comes later.</p>
     </div>
     <div class="proc-grid">
       <div class="proc reveal"><div class="n">01</div><h3>Assess</h3><p>We walk your property and evaluate wildfire risk, fuels, forest health, and existing conditions.</p></div>
-      <div class="proc reveal"><div class="n">02</div><h3>Prescribe</h3><p>You get practical, science-based treatment recommendations — grounded in forestry, not a sales pitch.</p></div>
+      <div class="proc reveal"><div class="n">02</div><h3>Prescribe</h3><p>You get practical, science-based treatment recommendations grounded in forestry, not a sales pitch.</p></div>
       <div class="proc reveal"><div class="n">03</div><h3>Prioritize</h3><p>Projects are sequenced by wildfire risk, forest health, and your objectives and budget.</p></div>
-      <div class="proc reveal"><div class="n">04</div><h3>Implement</h3><p>We carry out the treatments with our in-house equipment — or trusted partners for specialized work.</p></div>
+      <div class="proc reveal"><div class="n">04</div><h3>Implement</h3><p>We carry out the treatments with our in-house equipment, or trusted partners for specialized work.</p></div>
       <div class="proc reveal"><div class="n">05</div><h3>Maintain</h3><p>We monitor results and recommend long-term maintenance cycles that keep your land protected.</p></div>
     </div>
   </div>
@@ -651,13 +656,13 @@
     <div class="sec-head center reveal">
       <span class="eyebrow light">Implementation</span>
       <h2>Services</h2>
-      <p>When a treatment plan calls for equipment, we do the work ourselves — the full range of forestry and land-improvement services, in-house or with trusted partners.</p>
+      <p>When a treatment plan calls for equipment, we do the work ourselves: the full range of forestry and land-improvement services, in-house or with trusted partners.</p>
     </div>
     <div class="svc-grid">
       <div class="svc reveal">
         <div class="svc-ic"><i data-lucide="trees"></i></div>
         <h3>Forestry Mulching</h3>
-        <p>Grind brush, saplings, and overgrowth into nutrient-rich mulch in a single pass — no piles, no burning.</p>
+        <p>Grind brush, saplings, and overgrowth into nutrient-rich mulch in a single pass. No piles, no burning.</p>
       </div>
       <div class="svc reveal">
         <div class="svc-ic"><i data-lucide="flame"></i></div>
@@ -717,21 +722,21 @@
           <div class="ba-shot"><span class="ba-flag b">Before</span><img src="/images/p1-before.webp" alt="Before: impenetrable wall of brush and ladder fuels" width="900" height="900" loading="lazy"></div>
           <div class="ba-shot"><span class="ba-flag a">After</span><img src="/images/p1-after.webp" alt="After: open, park-like defensible space around the home" width="900" height="900" loading="lazy"></div>
         </div>
-        <div class="ba-cap"><h4>Defensible Space — Rural Home</h4><p>A solid wall of brush and ladder fuels opened into park-like defensible space around the home site.</p></div>
+        <div class="ba-cap"><h4>Defensible Space: Rural Home</h4><p>A solid wall of brush and ladder fuels opened into park-like defensible space around the home site.</p></div>
       </div>
       <div class="ba-card reveal">
         <div class="ba-pair">
           <div class="ba-shot"><span class="ba-flag b">Before</span><img src="/images/p2-before.webp" alt="Before: overgrown roadside stand with heavy understory fuels" width="900" height="900" loading="lazy"></div>
           <div class="ba-shot"><span class="ba-flag a">After</span><img src="/images/p2-after.webp" alt="After: the same stand opened to healthy, fire-resilient spacing" width="900" height="900" loading="lazy"></div>
         </div>
-        <div class="ba-cap"><h4>Understory Fuels Reduction</h4><p>The same stand, one season apart — surface and ladder fuels removed, healthy trees left to thrive.</p></div>
+        <div class="ba-cap"><h4>Understory Fuels Reduction</h4><p>The same stand, one season apart: surface and ladder fuels removed, healthy trees left to thrive.</p></div>
       </div>
       <div class="ba-card reveal">
         <div class="ba-pair">
           <div class="ba-shot"><span class="ba-flag b">Before</span><img src="/images/p3-before.webp" alt="Before: dense dry brush and grass choking the understory" width="900" height="900" loading="lazy"></div>
           <div class="ba-shot"><span class="ba-flag a">After</span><img src="/images/p3-after.webp" alt="After: brush mulched in place, ground clean and walkable" width="900" height="900" loading="lazy"></div>
         </div>
-        <div class="ba-cap"><h4>Brush Reclaim &amp; Mulch-In-Place</h4><p>Dense brush ground into mulch on site — nutrients returned to the soil, ground left clean and walkable.</p></div>
+        <div class="ba-cap"><h4>Brush Reclaim &amp; Mulch-In-Place</h4><p>Dense brush ground into mulch on site, returning nutrients to the soil and leaving the ground clean and walkable.</p></div>
       </div>
     </div>
   </div>
@@ -748,11 +753,11 @@
     <div class="why-grid">
       <div class="why reveal">
         <div class="why-ic"><i data-lucide="graduation-cap"></i></div>
-        <div><h3>A real forestry background</h3><p>Degrees in Forest Resource Management and Fire Ecology &amp; Management mean decisions are grounded in how forests actually work — not guesswork.</p></div>
+        <div><h3>A real forestry background</h3><p>Degrees in Forest Resource Management and Fire Ecology &amp; Management mean decisions are grounded in how forests actually work, not guesswork.</p></div>
       </div>
       <div class="why reveal">
         <div class="why-ic"><i data-lucide="shield"></i></div>
-        <div><h3>Focused on protection</h3><p>The aim is improving your property and reducing wildfire risk — creating usable, maintainable space, not just stripping the land bare.</p></div>
+        <div><h3>Focused on protection</h3><p>The aim is improving your property and reducing wildfire risk: creating usable, maintainable space, not just stripping the land bare.</p></div>
       </div>
       <div class="why reveal">
         <div class="why-ic"><i data-lucide="map-pin"></i></div>
@@ -760,7 +765,7 @@
       </div>
       <div class="why reveal">
         <div class="why-ic"><i data-lucide="settings"></i></div>
-        <div><h3>Practical, lasting results</h3><p>Effective solutions that improve the health, usability, and safety of your property — work you can actually maintain over time.</p></div>
+        <div><h3>Practical, lasting results</h3><p>Effective solutions that improve the health, usability, and safety of your property. Work you can actually maintain over time.</p></div>
       </div>
     </div>
   </div>
@@ -784,7 +789,7 @@
         </div>
       </div>
       <div class="area-map reveal">
-        <iframe class="area-embed" src="https://maps.google.com/maps?q=Coeur+d%27Alene,+ID&z=7&output=embed" title="Access Tech service area — North Idaho and Eastern Washington" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="area-embed" src="https://maps.google.com/maps?q=Coeur+d%27Alene,+ID&z=7&output=embed" title="Access Tech service area: North Idaho and Eastern Washington" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </div>
@@ -797,7 +802,7 @@
       <div class="est-side reveal">
         <span class="eyebrow">Get Started</span>
         <h2>Start with a free assessment</h2>
-        <p>Tell us about your property, its conditions, and your goals. We evaluate first, prescribe second, and implement third — this gives us what we need to begin.</p>
+        <p>Tell us about your property, its conditions, and your goals. We evaluate first, prescribe second, and implement third. This gives us what we need to begin.</p>
         <a class="phone-card" href="tel:2085008988">
           <i data-lucide="phone"></i>
           <div><div class="pk">Idaho</div><div class="pv">208-500-8988</div></div>
@@ -811,7 +816,7 @@
       <form class="est" id="estimate-form" action="https://api.web3forms.com/submit" method="POST">
         <!-- Web3Forms access key (routes submissions to adrian@hirobius.com) -->
         <input type="hidden" name="access_key" value="31719ab4-ebe8-484a-88bc-ed84acbc8b89">
-        <input type="hidden" name="subject" value="New property assessment request — Access Tech website">
+        <input type="hidden" name="subject" value="New property assessment request from the Access Tech website">
         <input type="hidden" name="from_name" value="Access Tech Website">
         <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none">
         <div class="frow">
@@ -849,12 +854,12 @@
             <option>Planning ahead</option>
           </select>
         </div>
-        <div class="fld"><label>Property Conditions &amp; Goals <span class="req">*</span></label><textarea name="message" placeholder="Describe your property and what you want from it — current conditions, concerns like fire risk or overgrowth, and your long-term goals." required></textarea></div>
+        <div class="fld"><label>Property Conditions &amp; Goals <span class="req">*</span></label><textarea name="message" placeholder="Describe your property and what you want from it: current conditions, concerns like fire risk or overgrowth, and your long-term goals." required></textarea></div>
         <button class="btn btn-primary" type="submit">
           Request a Free Assessment
           <i data-lucide="arrow-right"></i>
         </button>
-        <p class="form-foot" id="estimate-status">We'll get back to you quickly — usually within a day or two.</p>
+        <p class="form-foot" id="estimate-status">We'll get back to you quickly, usually within a day or two.</p>
       </form>
     </div>
   </div>
@@ -874,8 +879,8 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a class="brand" href="#top"><img class="brand-logo" src="/images/logo-white.png" alt="Access Tech — Land Management" width="170" height="65"></a>
-        <p>Fire management and land stewardship consulting — with in-house implementation — throughout North Idaho and Eastern Washington. Reclaim, restore, protect.</p>
+        <a class="brand" href="#top"><img class="brand-logo" src="/images/logo-white.png" alt="Access Tech Land Management" width="170" height="65"></a>
+        <p>Fire management and land stewardship consulting, with in-house implementation, throughout North Idaho and Eastern Washington. Reclaim, restore, protect.</p>
       </div>
       <div>
         <h5>Explore</h5>
@@ -887,8 +892,8 @@
       </div>
       <div>
         <h5>Contact</h5>
-        <a class="fl" href="tel:2085008988">Idaho — 208-500-8988</a>
-        <a class="fl" href="tel:5097890371">Washington — 509-789-0371</a>
+        <a class="fl" href="tel:2085008988">Idaho: 208-500-8988</a>
+        <a class="fl" href="tel:5097890371">Washington: 509-789-0371</a>
         <a class="fl" href="#estimate">Request a Free Assessment</a>
         <a class="fl" href="https://accesstechnw.com">accesstechnw.com</a>
         <a class="fl" href="/privacy.html">Privacy Policy</a>
@@ -952,7 +957,7 @@
       <div class="v2-hero-inner">
         <span class="v2-eyebrow light">North Idaho &amp; Eastern Washington</span>
         <h1>Forestry Mulching <span class="accent">&amp; Wildfire Fuel Reduction</span></h1>
-        <p class="lead">Reclaim, restore, and protect your land — guided by a degreed forester who understands how your forest actually works.</p>
+        <p class="lead">Reclaim, restore, and protect your land, guided by a degreed forester who understands how your forest actually works.</p>
         <div class="v2-actions">
           <a class="btn v2-btn" href="#v2-estimate">Request a Free Assessment</a>
           <a class="btn v2-btn-ghost" href="tel:2085008988">Call 208-500-8988</a>
@@ -1055,12 +1060,12 @@
         <div class="v2-why reveal">
           <div class="v2-why-ic"><i data-lucide="graduation-cap"></i></div>
           <h3>A real forestry background</h3>
-          <p>Degrees in Forest Resource Management and Fire Ecology &amp; Management — decisions grounded in how forests work.</p>
+          <p>Degrees in Forest Resource Management and Fire Ecology &amp; Management, with decisions grounded in how forests work.</p>
         </div>
         <div class="v2-why reveal">
           <div class="v2-why-ic"><i data-lucide="shield"></i></div>
           <h3>Focused on protection</h3>
-          <p>Reducing wildfire risk and creating usable, maintainable space — not just stripping the land bare.</p>
+          <p>Reducing wildfire risk and creating usable, maintainable space, not just stripping the land bare.</p>
         </div>
         <div class="v2-why reveal">
           <div class="v2-why-ic"><i data-lucide="map-pin"></i></div>
@@ -1078,7 +1083,7 @@
         <div class="v2-cta-side reveal">
           <span class="v2-eyebrow">Get Started</span>
           <h2>Request a free estimate</h2>
-          <p>Tell us about your property and project — we'll get back to you quickly, usually within a day or two.</p>
+          <p>Tell us about your property and project. We'll get back to you quickly, usually within a day or two.</p>
           <a class="v2-phone-card" href="tel:2085008988">
             <i data-lucide="phone"></i>
             <div><div class="pk">Idaho</div><div class="pv">208-500-8988</div></div>
@@ -1095,7 +1100,7 @@
           </div>
         </div>
 
-        <form class="est" onsubmit="event.preventDefault();alert('This is a design preview — the live form will be built in Carrd.');">
+        <form class="est" onsubmit="event.preventDefault();alert('This is a design preview. The live form will be built in Carrd.');">
           <div class="frow">
             <div class="fld"><label>Name <span class="req">*</span></label><input type="text" placeholder="Your name" required></div>
             <div class="fld"><label>Phone <span class="req">*</span></label><input type="tel" placeholder="(208) 000-0000" required></div>
@@ -1117,7 +1122,7 @@
             Request a Free Assessment
             <i data-lucide="arrow-right"></i>
           </button>
-          <p class="form-foot">We'll get back to you quickly — usually within a day or two.</p>
+          <p class="form-foot">We'll get back to you quickly, usually within a day or two.</p>
         </form>
       </div>
     </div>
@@ -1143,7 +1148,7 @@
         <a href="/privacy.html">Privacy</a>
       </nav>
     </div>
-    <div class="wrap"><div class="v2-foot-base">© 2026 Access Tech — Forestry mulching &amp; fuel reduction · North Idaho &amp; Eastern Washington</div></div>
+    <div class="wrap"><div class="v2-foot-base">© 2026 Access Tech · Forestry mulching &amp; fuel reduction · North Idaho &amp; Eastern Washington</div></div>
   </footer>
 
 </div><!-- /#layout-two -->
@@ -1184,11 +1189,11 @@
         const d=await r.json().catch(()=>({}));
         if(r.ok && d.success){
           ef.querySelectorAll('.frow,.fld,button').forEach(el=>el.style.display='none');
-          if(status){status.textContent="Thanks — your request was sent. We'll get back to you within a day or two.";status.style.fontSize='1.05rem';status.style.color='var(--ink)';}
+          if(status){status.textContent="Thanks! Your request was sent. We'll get back to you within a day or two.";status.style.fontSize='1.05rem';status.style.color='var(--ink)';}
         } else { throw new Error((d&&d.message)||'Submit failed'); }
       }catch(err){
         btn.disabled=false; btn.innerHTML=orig;
-        if(status){status.textContent='Sorry — something went wrong. Please call us or try again.';}
+        if(status){status.textContent='Sorry, something went wrong. Please call us or try again.';}
       }
     });
   }
