@@ -232,7 +232,8 @@
   .about-copy p.body{margin-bottom:var(--s3);color:var(--ink-soft);font-size:1.06rem}
   .about-copy p.body:last-of-type{margin-bottom:0}
   .creds{display:grid;grid-template-columns:1fr 1fr;gap:var(--s2);margin-top:var(--s4)}
-  .cred{background:#fff;border:1px solid var(--line);border-left:3px solid var(--ember);padding:1.1rem 1.3rem;border-radius:var(--radius);box-shadow:var(--shadow-sm)}
+  .cred{display:flex;align-items:center;gap:.9rem;background:#fff;border:1px solid var(--line);border-left:3px solid var(--ember);padding:1.1rem 1.3rem;border-radius:var(--radius);box-shadow:var(--shadow-sm)}
+  .cred svg{width:26px;height:26px;color:var(--ember-dark);flex:none}
   .cred .k{font-family:var(--font-sans);text-transform:uppercase;letter-spacing:.14em;font-size:.66rem;color:var(--ember-dark);font-weight:700}
   .cred .v{font-family:var(--font-sans);font-weight:600;font-size:1.02rem;color:var(--ink);margin-top:.3rem;line-height:1.25}
   .about-visual{position:relative;margin-bottom:24px}
@@ -628,8 +629,8 @@
         <p class="body">Access Tech provides fire management and land stewardship consulting, with in-house implementation, across North Idaho and Eastern Washington. We don't sell machine time. We help landowners assess wildfire risk, understand their property's condition, and manage their land for the long term.</p>
         <p class="body">Our work is guided by formal training in Forest Resource Management and Fire Ecology &amp; Management, and ongoing professional work in the forestry industry. The goal is simple: give landowners effective, practical solutions that improve the health, usability, and safety of their property.</p>
         <div class="creds">
-          <div class="cred"><div class="k">Degree</div><div class="v">Forest Resource Management</div></div>
-          <div class="cred"><div class="k">Degree</div><div class="v">Fire Ecology &amp; Management</div></div>
+          <div class="cred"><i data-lucide="graduation-cap"></i><div class="cred-body"><div class="k">Degree</div><div class="v">Forest Resource Management</div></div></div>
+          <div class="cred"><i data-lucide="graduation-cap"></i><div class="cred-body"><div class="k">Degree</div><div class="v">Fire Ecology &amp; Management</div></div></div>
         </div>
       </div>
       <div class="about-visual reveal">
