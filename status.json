@@ -1,11 +1,12 @@
 {
-  "updatedAt": "2026-07-13T00:38:46Z",
-  "phase": "prelaunch",
-  "headline": "Content-complete: 3 real before/after pairs, sunny hero, equipment About; launch gated on $1,500 + DNS flips",
+  "updatedAt": "2026-07-15T23:36:53Z",
+  "phase": "live",
+  "headline": "LAUNCHED: accesstechnw.com is public and indexable (noindex removed, Deployment Protection off, DNS pointed at Vercel; email/MX untouched).",
   "next": [
-    "Site-engine rebuild pilot: open session on hirobius/site-engine with content/access-tech.json + migration brief",
-    "Adrian: launch flips for the static build (DNS, protection, noindex) + collect $1,500",
-    "Swap dedicated hero shot if Phil sends one"
+    "Confirm https://accesstechnw.com loads with a padlock (Adrian)",
+    "Invoice + collect $1,500 from Phil",
+    "Swap Web3Forms key to deliver to Phil (CC Adrian) once he sends it",
+    "Submit sitemap to Google Search Console + link Google Business Profile"
   ],
   "blocked": []
 }

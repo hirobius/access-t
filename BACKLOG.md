@@ -21,7 +21,7 @@ Status key: ☐ todo · ◐ in progress · ✓ done · ⏸ deferred (on purpose)
 - ✓ Accessibility: WCAG-AA contrast fix, :focus-visible outlines, skip link
 - ✓ Layout toggle removed (CSS/HTML/JS); full layout only
 - ✓ README, ARCHITECTURE, build-anatomy + SOP docs, template inventory
-- ✓ Landed on `main` (production deploy READY, still gated)
+- ✓ LAUNCHED: live on accesstechnw.com (production public + indexable)
 - ◐ Before/After gallery + service-area map — styled placeholders, **awaiting Phil's real pairs**
 - ⏸ Delete parked Option 2 markup + collapse duplicate tokens (`--ember*`/`--leaf*`) + Bricolage-only fonts — parked per Adrian
 - ☐ Privacy policy copy once-over before launch (template text is generic)
@@ -29,10 +29,10 @@ Status key: ☐ todo · ◐ in progress · ✓ done · ⏸ deferred (on purpose)
 ## 1. Launch (Phase 0 — the critical path)
 - ☐ Invoice + collect the $1,500 build fee from Phil (Owner: Adrian)
 - ✓ Access Tech deal (one-off): $1,500 build + case-by-case edits — **not the standard model**
-- ☐ Point `accesstechnw.com` — currently on Squarespace; needs DNS access (Owner: Adrian/Phil)
-- ☐ Turn OFF Vercel Deployment Protection (Owner: Adrian — dashboard)
-- ☐ Remove `noindex` meta + push (Owner: agent, on Adrian's go)
-- ☐ Post-launch verify: domain resolves, SSL, form delivers from live domain, og-image/JSON-LD URLs resolve
+- ✓ Pointed accesstechnw.com at Vercel (A @ + www CNAME on Squarespace; email/MX untouched)
+- ✓ Vercel Deployment Protection OFF (site public)
+- ✓ Removed pre-launch noindex and pushed (site indexable)
+- ◐ Post-launch verify: confirm live padlock + form-from-live-domain (form still delivers to Adrian until key swap)
 - ☐ Submit sitemap to Google Search Console + link Google Business Profile (Owner: Adrian)
 
 ## 2. Content from client (blocked on Phil)
