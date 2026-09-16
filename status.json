@@ -1,12 +1,15 @@
 {
-  "updatedAt": "2026-07-15T23:36:53Z",
+  "updatedAt": "2026-09-16T00:00:00Z",
   "phase": "live",
-  "headline": "LAUNCHED: accesstechnw.com is public and indexable (noindex removed, Deployment Protection off, DNS pointed at Vercel; email/MX untouched).",
+  "headline": "LIVE: accesstechnw.com public, indexable, HTTPS confirmed. All remaining work tracked as GitHub Issues; no open code blockers.",
   "next": [
-    "Confirm https://accesstechnw.com loads with a padlock (Adrian)",
-    "Invoice + collect $1,500 from Phil",
-    "Swap Web3Forms key to deliver to Phil (CC Adrian) once he sends it",
-    "Submit sitemap to Google Search Console + link Google Business Profile"
+    "Invoice + collect $1,500 from Phil (#10)",
+    "Swap Web3Forms key to deliver to Phil, CC Adrian, once he sends it (#8)",
+    "Submit sitemap to Search Console + link Google Business Profile (#9)",
+    "Adrian's go to delete parked Option 2 + collapse duplicate tokens (#14)"
   ],
-  "blocked": []
+  "blocked": [
+    "Push migration brief + handoff template + content/access-tech.json into hirobius/site-engine (staged; this session is scope-locked to access-tech, needs a site-engine session or Adrian)",
+    "Self-host Lucide script (#12) — jsDelivr blocked in cloud sandbox, needs a local machine"
+  ]
 }
