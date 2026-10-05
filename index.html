@@ -2,6 +2,20 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<!-- Ads tracking (Google Tag Manager). GA4 and the Meta Pixel are configured
+     inside GTM, not here. Set GTM_ID to the real container ID to switch it on;
+     while it reads GTM-XXXXXXX nothing loads. -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  (function(id){
+    if (!/^GTM-[A-Z0-9]+$/.test(id) || id === 'GTM-XXXXXXX') return;
+    window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtm.js?id=' + id;
+    document.head.appendChild(s);
+  })('GTM-XXXXXXX');
+</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Access Tech | Fire Management & Land Stewardship in North Idaho & Eastern WA</title>
 
@@ -1180,6 +1194,12 @@
   });
 
 
+  /* ---- Ads tracking: phone taps ---- */
+  document.addEventListener('click',e=>{
+    const a=e.target.closest&&e.target.closest('a[href^="tel:"]');
+    if(a){(window.dataLayer=window.dataLayer||[]).push({event:'phone_click',phone_line:a.getAttribute('href').indexOf('208')>-1?'idaho':'washington'});}
+  });
+
   /* ---- Estimate form → Web3Forms (AJAX, inline success/error) ---- */
   const ef=document.getElementById('estimate-form');
   if(ef){
@@ -1192,6 +1212,7 @@
         const r=await fetch(ef.action,{method:'POST',body:new FormData(ef)});
         const d=await r.json().catch(()=>({}));
         if(r.ok && d.success){
+          (window.dataLayer=window.dataLayer||[]).push({event:'lead_form_submit'});
           ef.querySelectorAll('.frow,.fld,button,.form-consent').forEach(el=>el.style.display='none');
           if(status){status.textContent="Thanks! Your request was sent. We'll get back to you within a day or two.";status.style.fontSize='1.05rem';status.style.color='var(--ink)';}
         } else { throw new Error((d&&d.message)||'Submit failed'); }
